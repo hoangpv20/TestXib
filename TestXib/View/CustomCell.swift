@@ -12,6 +12,7 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var rankImage: UIImageView!
     @IBOutlet weak var memberName: UILabel!
     @IBOutlet weak var heartNumber: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -19,6 +20,7 @@ class CustomCell: UITableViewCell {
     func loadData(item: Member) {
         rankImage.image = UIImage(named: item.memberRank)
         memberName.text = item.name
+        memberName.font = UIFont(name: "Sarabun-Regular", size: 14)
         heartNumber.text = item.numberOfHeart
     }
     
@@ -30,14 +32,14 @@ class CustomCell: UITableViewCell {
     
     func insertNumber(number: IndexPath) {
         if (number.row > 2) {
-            let new = textToImage(drawText: "\(number.row + 1)", inImage: rankImage.image!, atPoint: CGPoint(x: 5, y: 2))
+            let new = textToImage(drawText: "\(number.row + 1)", inImage: rankImage.image!, atPoint: CGPoint(x: 12, y: 6))
             rankImage.image = new
         }
     }
     
     func textToImage(drawText text: String, inImage image: UIImage, atPoint point: CGPoint) -> UIImage {
         let textColor = UIColor.white
-        let textFont = UIFont(name: "Sarabun-Regular", size: 12)!
+        let textFont = UIFont(name: "Sarabun-Regular", size: 14)!
 
         let scale = UIScreen.main.scale
         UIGraphicsBeginImageContextWithOptions(image.size, false, scale)

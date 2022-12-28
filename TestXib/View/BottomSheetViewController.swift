@@ -13,9 +13,9 @@ class BottomSheetViewController: UIViewController, UITableViewDataSource, UITabl
     Member(memberRank: "goldTrophy", name: "Cin Lunn", numberOfHeart: "10k"),
     Member(memberRank: "silverTrophy", name: "Cin Lunn", numberOfHeart: "4.5k"),
     Member(memberRank: "bronzeTrophy", name: "Cin Lunn", numberOfHeart: "1k"),
-    Member(memberRank: "ranking", name: "Cin Lunn", numberOfHeart: "505"),
-    Member(memberRank: "ranking", name: "Cin Lunn", numberOfHeart: "300"),
-    Member(memberRank: "ranking", name: "Cin Lunn", numberOfHeart: "300"),
+    Member(memberRank: "smallRank", name: "Cin Lunn", numberOfHeart: "505"),
+    Member(memberRank: "smallRank", name: "Cin Lunn", numberOfHeart: "300"),
+    Member(memberRank: "smallRank", name: "Cin Lunn", numberOfHeart: "300"),
     ]
     
     let cellSpacingHeight: CGFloat = 20
@@ -88,9 +88,9 @@ class BottomSheetViewController: UIViewController, UITableViewDataSource, UITabl
         upRankButton.translatesAutoresizingMaskIntoConstraints = false
         
         let constraint = [
-        myView.bottomAnchor.constraint(equalTo: myTable.bottomAnchor, constant: 0),
-        myView.leadingAnchor.constraint(equalTo: myTable.leadingAnchor, constant: 0),
-        myView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 95/812),
+        myView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+        myView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+        myView.heightAnchor.constraint(equalToConstant: 82),
         myView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1),
         
         myRanking.centerYAnchor.constraint(equalTo: myView.centerYAnchor, constant: 0),
@@ -139,13 +139,20 @@ class BottomSheetViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 62
     }
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: myTable.frame.size.width, height: 42))
+        footerView.backgroundColor = UIColor.lightGray
+        return footerView
+    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 42
+    }
 }
 
 struct Member {
     var memberRank: String
     var name: String
     var numberOfHeart: String
-    
 }
 
 
