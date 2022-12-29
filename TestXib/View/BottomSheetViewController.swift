@@ -50,27 +50,31 @@ class BottomSheetViewController: UIViewController, UITableViewDataSource, UITabl
 // Custom footerView
         self.view.addSubview(myView)
         self.myTable.bringSubviewToFront(myView)
-        myView.backgroundColor = .white
+        myView.layer.shadowRadius = 5
+        myView.layer.shadowOpacity = 0.2
+        myView.layer.shadowOffset = .zero
+        myView.layer.shadowColor = UIColor.black.cgColor
+        myView.backgroundColor = UIColor(named: "FootViewColor")
         myView.translatesAutoresizingMaskIntoConstraints =  false
         let myRanking = UIImageView()
         myRanking.image = UIImage(named: "30+")
         let myAvt = UIImageView()
         myAvt.image = UIImage(named: "Avt")
         let myName = UILabel()
-        myName.text = "Tu Hy My"
+        myName.text = "Từ Hy Mỹ"
         myName.font = UIFont(name: "Sarabun-Regular", size: 14)
         let heart = UIImageView()
         heart.image = UIImage(named: "heart")
         let myHeart = UILabel()
         myHeart.text = "0"
         let upRankButton = UIButton()
-        upRankButton.setTitle("Len BXH", for: .normal)
+        upRankButton.setTitle("Lên BXH", for: .normal)
         upRankButton.setTitleColor(.black, for: .normal)
         upRankButton.layer.backgroundColor = UIColor.white.cgColor
         upRankButton.layer.cornerRadius = 10
-        upRankButton.layer.borderWidth = 1
+        upRankButton.layer.borderWidth = 0.4
         upRankButton.layer.borderColor = UIColor.black.cgColor
-        upRankButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
+        upRankButton.titleLabel?.font = UIFont(name: "Sarabun-SemiBold", size: 14)
         upRankButton.addTarget(self, action: #selector(upRankAction), for: .touchUpInside)
         
         myView.addSubview(myRanking)

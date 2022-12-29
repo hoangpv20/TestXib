@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84A3AF9A295D742D00F85434 /* Sarabun-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3AF99295D742D00F85434 /* Sarabun-SemiBold.ttf */; };
 		84BA000029542C5200CD858F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BAFFFF29542C5200CD858F /* ViewController.swift */; };
 		84BA000529542C5300CD858F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BA000429542C5300CD858F /* Assets.xcassets */; };
 		84BA000829542C5300CD858F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BA000629542C5300CD858F /* LaunchScreen.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84A3AF99295D742D00F85434 /* Sarabun-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sarabun-SemiBold.ttf"; sourceTree = "<group>"; };
 		84BA000429542C5300CD858F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84BA000729542C5300CD858F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84BA000929542C5300CD858F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				84BA0051295BF02B00CD858F /* Sarabun-Regular.ttf */,
 				84BA0052295BF07A00CD858F /* Sarabun-Medium.ttf */,
 				84BA0056295BFA0100CD858F /* Sarabun-Thin.ttf */,
+				84A3AF99295D742D00F85434 /* Sarabun-SemiBold.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				84BA000829542C5300CD858F /* LaunchScreen.storyboard in Resources */,
 				84BA0057295BFA0100CD858F /* Sarabun-Thin.ttf in Resources */,
 				84BA0054295BF3C200CD858F /* Sarabun-Medium.ttf in Resources */,
+				84A3AF9A295D742D00F85434 /* Sarabun-SemiBold.ttf in Resources */,
 				84BA000529542C5300CD858F /* Assets.xcassets in Resources */,
 				84BA003E29545DB800CD858F /* SecondViewController.xib in Resources */,
 			);
