@@ -25,20 +25,28 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Ranking Table"/>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPi-7d-lk5">
+                    <rect key="frame" x="170" y="124" width="74.5" height="31"/>
+                    <color key="backgroundColor" red="0.89795247349999996" green="1" blue="0.15361226550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="TOP UP"/>
+                    <connections>
+                        <action selector="topUpAction:" destination="-1" eventType="touchUpInside" id="evD-0i-kGE"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="8VH-0l-ufn" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Rze-de-pkk"/>
                 <constraint firstItem="8VH-0l-ufn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WRA-nL-TFx"/>
+                <constraint firstItem="yPi-7d-lk5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="ceh-yq-O6h"/>
+                <constraint firstItem="yPi-7d-lk5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uY1-y7-t41"/>
             </constraints>
             <point key="canvasLocation" x="132" y="100"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

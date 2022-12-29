@@ -17,6 +17,8 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let backButton = UIBarButtonItem(title: " ", style: .plain, target: self, action: nil)
+        navigationItem.backBarButtonItem = backButton
         rankingButton.addTarget(self, action: #selector(bottomSheet), for: .touchUpInside)
 //        view.addSubview(mainImage)
 //        mainImage.translatesAutoresizingMaskIntoConstraints = false
@@ -40,6 +42,10 @@ class SecondViewController: UIViewController {
         self.present(self.itemTVC, animated: true, completion: nil)
     }
     
+    @IBAction func topUpAction(_ sender: Any) {
+        let thirdViewController = ThirdViewController()
+        navigationController?.pushViewController(thirdViewController, animated: true)
+    }
     
 }
 

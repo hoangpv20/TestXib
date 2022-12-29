@@ -8,9 +8,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomSheetViewController" customModule="TestXib" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThirdViewController" customModule="TestXib" customModuleProvider="target">
             <connections>
-                <outlet property="myTable" destination="eGM-yj-tJQ" id="PKx-oE-Ged"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,21 +17,9 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eGM-yj-tJQ">
-                    <rect key="frame" x="0.0" y="119" width="414" height="743"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
-            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eGM-yj-tJQ" secondAttribute="bottom" id="21f-DT-A4L"/>
-                <constraint firstItem="eGM-yj-tJQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2QT-Gx-cTy"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eGM-yj-tJQ" secondAttribute="trailing" id="DWU-YP-OzV"/>
-                <constraint firstItem="eGM-yj-tJQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="119" id="ykh-3X-sbC"/>
-            </constraints>
-            <point key="canvasLocation" x="-94.20289855072464" y="184.82142857142856"/>
+            <point key="canvasLocation" x="132" y="59"/>
         </view>
     </objects>
     <resources>
