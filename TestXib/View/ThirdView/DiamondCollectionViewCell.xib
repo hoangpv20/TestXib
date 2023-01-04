@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DiamondCollectionViewCell" id="gTV-IL-0wX" customClass="DiamondCollectionViewCell" customModule="TestXib" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="227" height="77"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="227" height="77"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="mW1-1Y-XxH">
+                        <rect key="frame" x="79" y="13" width="69.5" height="24"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diamond" translatesAutoresizingMaskIntoConstraints="NO" id="OMK-cY-J5K">
+                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="5dA-hT-hWl"/>
+                                    <constraint firstAttribute="width" constant="24" id="nkR-C7-asL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPD-oy-oRM">
+                                <rect key="frame" x="28" y="0.0" width="41.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNU-Zv-639">
+                        <rect key="frame" x="93" y="51" width="41.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 31789" translatesAutoresizingMaskIntoConstraints="NO" id="K5q-Ix-XcS">
+                        <rect key="frame" x="-2" y="-3" width="37" height="37"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="37" id="Tr1-cW-z75"/>
+                            <constraint firstAttribute="height" constant="37" id="mQu-lr-tco"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" name="CellColor"/>
+            <constraints>
+                <constraint firstItem="JNU-Zv-639" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mW1-1Y-XxH" secondAttribute="bottom" constant="4" id="5ly-FY-2n8"/>
+                <constraint firstItem="mW1-1Y-XxH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="13" id="5yT-sb-ZbN"/>
+                <constraint firstItem="mW1-1Y-XxH" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Bic-Pf-tlA"/>
+                <constraint firstAttribute="bottom" secondItem="JNU-Zv-639" secondAttribute="bottom" constant="5.5" id="BmP-E7-LMy"/>
+                <constraint firstItem="K5q-Ix-XcS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="-3" id="Rn8-eM-IQJ"/>
+                <constraint firstItem="K5q-Ix-XcS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="-2" id="UVG-TR-94n"/>
+                <constraint firstItem="JNU-Zv-639" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="XrY-MY-l1c"/>
+                <constraint firstItem="JNU-Zv-639" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="mxq-Ls-w2g"/>
+                <constraint firstItem="mW1-1Y-XxH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="uym-K4-JIx"/>
+            </constraints>
+            <size key="customSize" width="551" height="287"/>
+            <connections>
+                <outlet property="numberOfDiamonds" destination="JPD-oy-oRM" id="YXu-M8-akc"/>
+                <outlet property="price" destination="JNU-Zv-639" id="omR-79-N7W"/>
+                <outlet property="sale" destination="K5q-Ix-XcS" id="Xa4-Mw-XiL"/>
+            </connections>
+            <point key="canvasLocation" x="77.536231884057983" y="185.15625"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Group 31789" width="38" height="37.5"/>
+        <image name="diamond" width="24" height="24"/>
+        <namedColor name="CellColor">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
