@@ -185,7 +185,7 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
         //Create Gradient color
         if self.lastIndexActive != indexPath {
             let cell = diamondTopup.cellForItem(at: indexPath) as! DiamondCollectionViewCell
-            let gradientBorder = UICollectionViewCell.gradientImage(bounds: cell.bounds, colors: [UIColor(named: "ColorGr1")!, UIColor(named: "ColorGr2")!])
+            let gradientBorder = UICollectionViewCell.gradientImage(bounds: cell.bounds, colors: [UIColor(named: "ColorGr1")!, UIColor(named: "ColorGr2")!, UIColor(named: "ColorGr3")!])
             let gradientColor = UIColor(patternImage: gradientBorder)
             cell.backgroundColor =  UIColor(named: "SelectedCell")
             cell.layer.borderColor = gradientColor.cgColor
@@ -256,10 +256,12 @@ extension UICollectionViewCell {
         gradientLayer.frame = bounds
         gradientLayer.colors = colors.map(\.cgColor)
 
-        // This makes it left to right, default is top to bottom
-        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+//        // This makes it left to right, default is top to bottom
+//        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+//        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
         
-        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        gradientLayer.type = .axial
+        gradientLayer.locations = [0, 0.5, 1]
 
         let renderer = UIGraphicsImageRenderer(bounds: bounds)
 
