@@ -10,12 +10,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThirdViewController" customModule="TestXib" customModuleProvider="target">
             <connections>
-                <outlet property="diamondButton" destination="VNm-dz-VcN" id="3nv-Oa-ThK"/>
+                <outlet property="diamondTabView" destination="oTp-xP-dYP" id="MDL-vd-koU"/>
                 <outlet property="diamondTopup" destination="oHY-f8-ERT" id="Lkb-bB-xBQ"/>
                 <outlet property="diamondView" destination="Oib-gW-chz" id="Kto-Oh-91v"/>
-                <outlet property="roseButton" destination="V4w-WG-nY8" id="6y3-8b-J7p"/>
+                <outlet property="roseTabView" destination="UAd-zr-0Gj" id="Irv-ve-muC"/>
                 <outlet property="roseView" destination="bGd-vY-aLR" id="gnj-I6-hNZ"/>
-                <outlet property="rubyButton" destination="FSX-c1-PP5" id="tc0-Vw-kSv"/>
+                <outlet property="rubyTabView" destination="5MB-Gp-g9c" id="i2j-h6-baX"/>
                 <outlet property="rubyView" destination="IWm-49-TfY" id="1qJ-7w-JZK"/>
                 <outlet property="spacing1" destination="2uW-Zc-gtH" id="7F0-tB-1Hs"/>
                 <outlet property="spacing2" destination="wzW-Nk-iy3" id="XDD-OR-Rzk"/>
@@ -38,25 +38,6 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTp-xP-dYP">
                             <rect key="frame" x="0.0" y="0.0" width="124.5" height="25"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNm-dz-VcN">
-                                    <rect key="frame" x="0.0" y="0.0" width="124.5" height="25"/>
-                                    <color key="tintColor" red="1" green="0.2178690902" blue="0.193092507" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Kim cương">
-                                        <fontDescription key="titleFontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="14"/>
-                                    </buttonConfiguration>
-                                    <connections>
-                                        <action selector="diamondTopup:" destination="-1" eventType="touchUpInside" id="Xqx-vj-yqR"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="VNm-dz-VcN" secondAttribute="bottom" id="ACz-DF-cvk"/>
-                                <constraint firstItem="VNm-dz-VcN" firstAttribute="leading" secondItem="oTp-xP-dYP" secondAttribute="leading" id="LLA-Kj-yTV"/>
-                                <constraint firstAttribute="trailing" secondItem="VNm-dz-VcN" secondAttribute="trailing" id="O1M-ML-og0"/>
-                                <constraint firstItem="VNm-dz-VcN" firstAttribute="top" secondItem="oTp-xP-dYP" secondAttribute="top" id="UOa-PF-dEN"/>
-                            </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2uW-Zc-gtH">
                             <rect key="frame" x="124.5" y="0.0" width="0.0" height="25"/>
@@ -68,26 +49,7 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5MB-Gp-g9c">
                             <rect key="frame" x="124.5" y="0.0" width="133" height="25"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSX-c1-PP5">
-                                    <rect key="frame" x="0.0" y="0.0" width="133" height="25"/>
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Ruby">
-                                        <fontDescription key="titleFontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="14"/>
-                                    </buttonConfiguration>
-                                    <connections>
-                                        <action selector="rubyTopup:" destination="-1" eventType="touchUpInside" id="XJd-oe-f2v"/>
-                                    </connections>
-                                </button>
-                            </subviews>
                             <color key="tintColor" red="1" green="0.2178690902" blue="0.193092507" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstItem="FSX-c1-PP5" firstAttribute="top" secondItem="5MB-Gp-g9c" secondAttribute="top" id="1e5-GF-8Wv"/>
-                                <constraint firstAttribute="trailing" secondItem="FSX-c1-PP5" secondAttribute="trailing" id="Aao-we-OqU"/>
-                                <constraint firstAttribute="bottom" secondItem="FSX-c1-PP5" secondAttribute="bottom" id="mdR-g1-k2N"/>
-                                <constraint firstItem="FSX-c1-PP5" firstAttribute="leading" secondItem="5MB-Gp-g9c" secondAttribute="leading" id="xpy-Vd-YDZ"/>
-                            </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzW-Nk-iy3">
                             <rect key="frame" x="257.5" y="0.0" width="0.0" height="25"/>
@@ -98,25 +60,6 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAd-zr-0Gj">
                             <rect key="frame" x="257.5" y="0.0" width="124.5" height="25"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4w-WG-nY8">
-                                    <rect key="frame" x="0.0" y="0.0" width="124.5" height="25"/>
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Hoa hồng">
-                                        <fontDescription key="titleFontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="14"/>
-                                    </buttonConfiguration>
-                                    <connections>
-                                        <action selector="roseTopup:" destination="-1" eventType="touchUpInside" id="8W4-3L-uhe"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="V4w-WG-nY8" secondAttribute="bottom" id="5bS-fg-OAs"/>
-                                <constraint firstAttribute="trailing" secondItem="V4w-WG-nY8" secondAttribute="trailing" id="6zY-vF-Vcc"/>
-                                <constraint firstItem="V4w-WG-nY8" firstAttribute="top" secondItem="UAd-zr-0Gj" secondAttribute="top" id="P2Z-Ns-6vM"/>
-                                <constraint firstItem="V4w-WG-nY8" firstAttribute="leading" secondItem="UAd-zr-0Gj" secondAttribute="leading" id="tpR-1s-vag"/>
-                            </constraints>
                         </view>
                     </subviews>
                     <constraints>

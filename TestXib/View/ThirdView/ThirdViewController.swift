@@ -12,13 +12,16 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var diamondView: UIView!
     @IBOutlet weak var rubyView: UIView!
     @IBOutlet weak var roseView: UIView!
-    @IBOutlet weak var diamondButton: UIButton!
-    @IBOutlet weak var rubyButton: UIButton!
-    @IBOutlet weak var roseButton: UIButton!
+    @IBOutlet weak var diamondTabView: UIView!
+    @IBOutlet weak var rubyTabView: UIView!
+    @IBOutlet weak var roseTabView: UIView!
     @IBOutlet weak var diamondTopup: UICollectionView!
     @IBOutlet weak var spacing1: UIView!
     @IBOutlet weak var spacing2: UIView!
     
+    let diamondButton = UIButton()
+    let rubyButton = UIButton()
+    let roseButton = UIButton()
     let myDiamond = UIImageView()
     let bigIcon = UIImageView()
     let abstract = UIButton()
@@ -55,12 +58,34 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
         rect1.image = UIImage(named: "FooterRectangle")
         rect2.image = UIImage(named: "FooterRectangle")
         rect3.image = UIImage(named: "FooterRectangle")
+        
+        diamondTabView.addSubview(diamondButton)
+        diamondButton.translatesAutoresizingMaskIntoConstraints = false
+        diamondButton.setTitle("Kim cương", for: .normal)
+        diamondButton.setTitleColor(.red, for: .normal)
+        diamondButton.titleLabel?.font = UIFont(name: "Sarabun-SemiBold", size: 14)
+        diamondButton.addTarget(self, action: #selector(diamondTopupp), for: .touchUpInside)
         diamondButton.addSubview(rect1)
         rect1.translatesAutoresizingMaskIntoConstraints = false
+        
+        rubyTabView.addSubview(rubyButton)
+        rubyButton.translatesAutoresizingMaskIntoConstraints = false
+        rubyButton.setTitle("Ruby", for: .normal)
+        rubyButton.setTitleColor(.black, for: .normal)
+        rubyButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
+        rubyButton.addTarget(self, action: #selector(rubyTopup), for: .touchUpInside)
         rubyButton.addSubview(rect2)
         rect2.translatesAutoresizingMaskIntoConstraints = false
+        
+        roseTabView.addSubview(roseButton)
+        roseButton.translatesAutoresizingMaskIntoConstraints = false
+        roseButton.setTitle("Hoa Hồng", for: .normal)
+        roseButton.setTitleColor(.black, for: .normal)
+        roseButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
+        roseButton.addTarget(self, action: #selector(roseTopup), for: .touchUpInside)
         roseButton.addSubview(rect3)
         rect3.translatesAutoresizingMaskIntoConstraints = false
+        
         rubyView.isHidden = true
         roseView.isHidden = true
         rect2.isHidden = true
@@ -93,6 +118,21 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
         subcript.font = UIFont(name: "Sarabun-Regular", size: 18)
         
         let constraint = [
+            diamondButton.topAnchor.constraint(equalTo: diamondTabView.topAnchor, constant: 0),
+            diamondButton.bottomAnchor.constraint(equalTo: diamondTabView.bottomAnchor, constant: 0),
+            diamondButton.leadingAnchor.constraint(equalTo: diamondTabView.leadingAnchor, constant: 0),
+            diamondButton.trailingAnchor.constraint(equalTo: diamondTabView.trailingAnchor, constant: 0),
+            
+            rubyButton.topAnchor.constraint(equalTo: rubyTabView.topAnchor, constant: 0),
+            rubyButton.bottomAnchor.constraint(equalTo: rubyTabView.bottomAnchor, constant: 0),
+            rubyButton.leadingAnchor.constraint(equalTo: rubyTabView.leadingAnchor, constant: 0),
+            rubyButton.trailingAnchor.constraint(equalTo: rubyTabView.trailingAnchor, constant: 0),
+            
+            roseButton.topAnchor.constraint(equalTo: roseTabView.topAnchor, constant: 0),
+            roseButton.bottomAnchor.constraint(equalTo: roseTabView.bottomAnchor, constant: 0),
+            roseButton.leadingAnchor.constraint(equalTo: roseTabView.leadingAnchor, constant: 0),
+            roseButton.trailingAnchor.constraint(equalTo: roseTabView.trailingAnchor, constant: 0),
+            
             myDiamond.topAnchor.constraint(equalTo: diamondView.topAnchor, constant: 36),
             myDiamond.centerXAnchor.constraint(equalTo: diamondView.centerXAnchor, constant: 0),
             
@@ -156,40 +196,47 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
         }
     }
         
-    @IBAction func diamondTopup(_ sender: Any) {
+    @objc func diamondTopupp() {
         diamondView.isHidden = false
         rubyView.isHidden = true
         roseView.isHidden = true
         rect1.isHidden = false
         rect2.isHidden = true
         rect3.isHidden = true
-        diamondButton.titleLabel?.font = UIFont(name: "Sarabun-SemiBold", size: 18)
-        rubyButton.titleLabel?.textColor = .black
-        roseButton.titleLabel?.textColor = .black
+        diamondButton.titleLabel?.font = UIFont(name: "Sarabun-SemiBold", size: 14)
+        diamondButton.setTitleColor(.red, for: .normal)
+        rubyButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
+        rubyButton.setTitleColor(.black, for: .normal)
+        roseButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
+        roseButton.setTitleColor(.black, for: .normal)
     }
-    @IBAction func rubyTopup(_ sender: Any) {
+    @objc func rubyTopup() {
         diamondView.isHidden = true
         rubyView.isHidden = false
         roseView.isHidden = true
         rect1.isHidden = true
         rect2.isHidden = false
         rect3.isHidden = true
-        diamondButton.titleLabel?.textColor = .black
-        roseButton.titleLabel?.textColor = .black
-        rubyButton.tintColor = .red
-        rubyButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        rubyButton.titleLabel?.font = UIFont(name: "Sarabun-SemiBold", size: 14)
+        rubyButton.setTitleColor(.red, for: .normal)
+        diamondButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
+        diamondButton.setTitleColor(.black, for: .normal)
+        roseButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
+        roseButton.setTitleColor(.black, for: .normal)
     }
-    @IBAction func roseTopup(_ sender: Any) {
+    @objc func roseTopup() {
         diamondView.isHidden = true
         rubyView.isHidden = true
         roseView.isHidden = false
         rect1.isHidden = true
         rect2.isHidden = true
         rect3.isHidden = false
-        diamondButton.titleLabel?.textColor = .black
-        rubyButton.titleLabel?.textColor = .black
-        roseButton.tintColor = .red
-        roseButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        roseButton.titleLabel?.font = UIFont(name: "Sarabun-SemiBold", size: 14)
+        roseButton.setTitleColor(.red, for: .normal)
+        rubyButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
+        rubyButton.setTitleColor(.black, for: .normal)
+        diamondButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
+        diamondButton.setTitleColor(.black, for: .normal)
     }
 }
 
