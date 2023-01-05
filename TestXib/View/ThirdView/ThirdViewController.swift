@@ -256,12 +256,12 @@ extension UICollectionViewCell {
         gradientLayer.frame = bounds
         gradientLayer.colors = colors.map(\.cgColor)
 
-//        // This makes it left to right, default is top to bottom
-//        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
-//        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        // This makes it left to right, default is top to bottom
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
         
-        gradientLayer.type = .axial
-        gradientLayer.locations = [0, 0.5, 1]
+//        gradientLayer.type = .axial
+//        gradientLayer.locations = [0, 0.5, 1]
 
         let renderer = UIGraphicsImageRenderer(bounds: bounds)
 
