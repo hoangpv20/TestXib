@@ -16,6 +16,8 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var rubyButton: UIButton!
     @IBOutlet weak var roseButton: UIButton!
     @IBOutlet weak var diamondTopup: UICollectionView!
+    @IBOutlet weak var spacing1: UIView!
+    @IBOutlet weak var spacing2: UIView!
     
     let myDiamond = UIImageView()
     let bigIcon = UIImageView()
@@ -38,6 +40,8 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        diamondTopup.allowsMultipleSelection = false
         
         diamondTopup.dataSource = self
         diamondTopup.delegate = self
@@ -114,7 +118,10 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
             rect3.bottomAnchor.constraint(equalTo: roseButton.bottomAnchor, constant: 0),
             
             subcript.topAnchor.constraint(equalTo: myDiamond.bottomAnchor, constant: 13),
-            subcript.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28)
+            subcript.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
+            
+            spacing1.widthAnchor.constraint(equalToConstant: 0.5),
+            spacing2.widthAnchor.constraint(equalToConstant: 0.5)
         ]
         NSLayoutConstraint.activate(constraint)
     }
@@ -132,19 +139,23 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.size.width*107/375, height: 67)
     }
+    var lastIndexActive: IndexPath = [1 ,0]
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = diamondTopup.cellForItem(at: indexPath)
-        if cell?.backgroundColor == UIColor(named: "CellColor") {
-            cell?.layer.borderWidth = 1.5
-            cell?.backgroundColor = UIColor(named: "SelectedCell")
-            cell?.layer.borderColor = UIColor(named: "SelectedBorder")?.cgColor
-        } else {
-            cell?.backgroundColor = UIColor(named: "CellColor")
-            cell?.layer.borderColor = UIColor.systemBackground.cgColor
+        if self.lastIndexActive != indexPath {
+            let cell = diamondTopup.cellForItem(at: indexPath) as! DiamondCollectionViewCell
+            cell.backgroundColor =  UIColor(named: "SelectedCell")
+            cell.layer.borderWidth = 1.5
+            cell.layer.borderColor = UIColor(named: "SelectedBorder")?.cgColor
+            cell.layer.masksToBounds = true
+            
+            let celll = diamondTopup.cellForItem(at: self.lastIndexActive) as? DiamondCollectionViewCell
+            celll?.backgroundColor = UIColor(named: "CellColor")
+            celll?.layer.borderColor = UIColor.systemBackground.cgColor
+            celll?.layer.masksToBounds = true
+            self.lastIndexActive = indexPath
         }
     }
-    
-    
+        
     @IBAction func diamondTopup(_ sender: Any) {
         diamondView.isHidden = false
         rubyView.isHidden = true
@@ -152,7 +163,7 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
         rect1.isHidden = false
         rect2.isHidden = true
         rect3.isHidden = true
-        diamondButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        diamondButton.titleLabel?.font = UIFont(name: "Sarabun-SemiBold", size: 18)
         rubyButton.titleLabel?.textColor = .black
         roseButton.titleLabel?.textColor = .black
     }
@@ -180,10 +191,11 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
         roseButton.tintColor = .red
         roseButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
     }
-    
 }
+
 struct Diamond {
     var diamondNumber: String
     var diamondPrice: String
     var forSale: Bool
 }
+
