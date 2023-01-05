@@ -12,6 +12,8 @@ class DiamondCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var sale: UIImageView!
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var numberOfDiamonds: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         price.font = UIFont(name: "Sarabun-Regular", size: 12)

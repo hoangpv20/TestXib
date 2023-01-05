@@ -44,11 +44,10 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        diamondTopup.allowsMultipleSelection = false
-        
         diamondTopup.dataSource = self
         diamondTopup.delegate = self
         diamondTopup.register(UINib(nibName: "DiamondCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DiamondCollectionViewCell")
+        diamondTopup.allowsMultipleSelection = false
         
         title  = "18 live +"
         let attributes = [NSAttributedString.Key.font: UIFont(name: "Sarabun-SemiBold", size: 18)!]
@@ -117,6 +116,8 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
         subcript.text = "Nạp kim cương"
         subcript.font = UIFont(name: "Sarabun-Regular", size: 18)
         
+
+        
         let constraint = [
             diamondButton.topAnchor.constraint(equalTo: diamondTabView.topAnchor, constant: 0),
             diamondButton.bottomAnchor.constraint(equalTo: diamondTabView.bottomAnchor, constant: 0),
@@ -181,11 +182,14 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     var lastIndexActive: IndexPath = [1 ,0]
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //Create Gradient color
         if self.lastIndexActive != indexPath {
             let cell = diamondTopup.cellForItem(at: indexPath) as! DiamondCollectionViewCell
+            let gradientBorder = UICollectionViewCell.gradientImage(bounds: cell.bounds, colors: [UIColor(named: "ColorGr1")!, UIColor(named: "ColorGr2")!])
+            let gradientColor = UIColor(patternImage: gradientBorder)
             cell.backgroundColor =  UIColor(named: "SelectedCell")
+            cell.layer.borderColor = gradientColor.cgColor
             cell.layer.borderWidth = 1.5
-            cell.layer.borderColor = UIColor(named: "SelectedBorder")?.cgColor
             cell.layer.masksToBounds = true
             
             let celll = diamondTopup.cellForItem(at: self.lastIndexActive) as? DiamondCollectionViewCell
@@ -246,3 +250,21 @@ struct Diamond {
     var forSale: Bool
 }
 
+extension UICollectionViewCell {
+    static func gradientImage(bounds: CGRect, colors: [UIColor]) -> UIImage {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
+        gradientLayer.colors = colors.map(\.cgColor)
+
+        // This makes it left to right, default is top to bottom
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+        
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+
+        return renderer.image { ctx in
+            gradientLayer.render(in: ctx.cgContext)
+        }
+    }
+}
