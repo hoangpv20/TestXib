@@ -12,25 +12,16 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var diamondView: UIView!
     @IBOutlet weak var rubyView: UIView!
     @IBOutlet weak var roseView: UIView!
-    @IBOutlet weak var diamondTabView: UIView!
-    @IBOutlet weak var rubyTabView: UIView!
-    @IBOutlet weak var roseTabView: UIView!
     @IBOutlet weak var diamondTopup: UICollectionView!
-    @IBOutlet weak var spacing1: UIView!
-    @IBOutlet weak var spacing2: UIView!
     
-    let diamondButton = UIButton()
-    let rubyButton = UIButton()
-    let roseButton = UIButton()
     let myDiamond = UIImageView()
     let bigIcon = UIImageView()
     let abstract = UIButton()
     let diamondTotal = UILabel()
     let diamondCurrent = UILabel()
-    let rect1 = UIImageView()
-    let rect2 = UIImageView()
-    let rect3 = UIImageView()
     let subcript = UILabel()
+    
+    let customTabView = TabbarGradient()
     
     let data: [Diamond] = [
         Diamond(diamondNumber: "69", diamondPrice: "100.000 vnd", forSale: false),
@@ -40,6 +31,8 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
         Diamond(diamondNumber: "2499", diamondPrice: "100.000 vnd", forSale: true),
         Diamond(diamondNumber: "6999", diamondPrice: "100.000 vnd", forSale: true),
     ]
+    
+    var lastIndexActive: IndexPath = [1 ,0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,41 +47,19 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
         UINavigationBar.appearance().titleTextAttributes = attributes
         
         //Custom tabView
-        rect1.image = UIImage(named: "FooterRectangle")
-        rect2.image = UIImage(named: "FooterRectangle")
-        rect3.image = UIImage(named: "FooterRectangle")
         
-        diamondTabView.addSubview(diamondButton)
-        diamondButton.translatesAutoresizingMaskIntoConstraints = false
-        diamondButton.setTitle("Kim cương", for: .normal)
-        diamondButton.setTitleColor(.red, for: .normal)
-        diamondButton.titleLabel?.font = UIFont(name: "Sarabun-SemiBold", size: 14)
-        diamondButton.addTarget(self, action: #selector(diamondTopupp), for: .touchUpInside)
-        diamondButton.addSubview(rect1)
-        rect1.translatesAutoresizingMaskIntoConstraints = false
-        
-        rubyTabView.addSubview(rubyButton)
-        rubyButton.translatesAutoresizingMaskIntoConstraints = false
-        rubyButton.setTitle("Ruby", for: .normal)
-        rubyButton.setTitleColor(.black, for: .normal)
-        rubyButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
-        rubyButton.addTarget(self, action: #selector(rubyTopup), for: .touchUpInside)
-        rubyButton.addSubview(rect2)
-        rect2.translatesAutoresizingMaskIntoConstraints = false
-        
-        roseTabView.addSubview(roseButton)
-        roseButton.translatesAutoresizingMaskIntoConstraints = false
-        roseButton.setTitle("Hoa Hồng", for: .normal)
-        roseButton.setTitleColor(.black, for: .normal)
-        roseButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
-        roseButton.addTarget(self, action: #selector(roseTopup), for: .touchUpInside)
-        roseButton.addSubview(rect3)
-        rect3.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(customTabView)
+        customTabView.translatesAutoresizingMaskIntoConstraints = false
+        customTabView.diamondTabView.myButton.addTarget(self, action: #selector(diamondTopupp), for: .touchUpInside)
+        customTabView.rubyTabView.myButton.addTarget(self, action: #selector(rubyTopup), for: .touchUpInside)
+        customTabView.roseTabView.myButton.addTarget(self, action: #selector(roseTopup), for: .touchUpInside)
+        customTabView.diamondTabView.myButton.setTitleColor(.red, for: .normal)
+        customTabView.diamondTabView.myButton.titleLabel?.font = UIFont(name: "Sarabun-SemiBold", size: 14)
         
         rubyView.isHidden = true
         roseView.isHidden = true
-        rect2.isHidden = true
-        rect3.isHidden = true
+        customTabView.roseTabView.footRect.isHidden = true
+        customTabView.rubyTabView.footRect.isHidden = true
         
         //Custom MyDiamond frame
         diamondView.addSubview(myDiamond)
@@ -116,23 +87,12 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
         subcript.text = "Nạp kim cương"
         subcript.font = UIFont(name: "Sarabun-Regular", size: 18)
         
-
-        
         let constraint = [
-            diamondButton.topAnchor.constraint(equalTo: diamondTabView.topAnchor, constant: 0),
-            diamondButton.bottomAnchor.constraint(equalTo: diamondTabView.bottomAnchor, constant: 0),
-            diamondButton.leadingAnchor.constraint(equalTo: diamondTabView.leadingAnchor, constant: 0),
-            diamondButton.trailingAnchor.constraint(equalTo: diamondTabView.trailingAnchor, constant: 0),
             
-            rubyButton.topAnchor.constraint(equalTo: rubyTabView.topAnchor, constant: 0),
-            rubyButton.bottomAnchor.constraint(equalTo: rubyTabView.bottomAnchor, constant: 0),
-            rubyButton.leadingAnchor.constraint(equalTo: rubyTabView.leadingAnchor, constant: 0),
-            rubyButton.trailingAnchor.constraint(equalTo: rubyTabView.trailingAnchor, constant: 0),
-            
-            roseButton.topAnchor.constraint(equalTo: roseTabView.topAnchor, constant: 0),
-            roseButton.bottomAnchor.constraint(equalTo: roseTabView.bottomAnchor, constant: 0),
-            roseButton.leadingAnchor.constraint(equalTo: roseTabView.leadingAnchor, constant: 0),
-            roseButton.trailingAnchor.constraint(equalTo: roseTabView.trailingAnchor, constant: 0),
+            customTabView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            customTabView.topAnchor.constraint(equalTo: view.topAnchor, constant: 92),
+            customTabView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            customTabView.heightAnchor.constraint(equalToConstant: 25),
             
             myDiamond.topAnchor.constraint(equalTo: diamondView.topAnchor, constant: 36),
             myDiamond.centerXAnchor.constraint(equalTo: diamondView.centerXAnchor, constant: 0),
@@ -149,20 +109,9 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
             abstract.topAnchor.constraint(equalTo: myDiamond.topAnchor, constant: 25),
             abstract.trailingAnchor.constraint(equalTo: myDiamond.trailingAnchor, constant: -18),
             
-            rect1.centerXAnchor.constraint(equalTo: diamondButton.centerXAnchor, constant: 0),
-            rect1.bottomAnchor.constraint(equalTo: diamondButton.bottomAnchor, constant: 0),
-            
-            rect2.centerXAnchor.constraint(equalTo: rubyButton.centerXAnchor, constant: 0),
-            rect2.bottomAnchor.constraint(equalTo: rubyButton.bottomAnchor, constant: 0),
-            
-            rect3.centerXAnchor.constraint(equalTo: roseButton.centerXAnchor, constant: 0),
-            rect3.bottomAnchor.constraint(equalTo: roseButton.bottomAnchor, constant: 0),
-            
             subcript.topAnchor.constraint(equalTo: myDiamond.bottomAnchor, constant: 13),
             subcript.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
             
-            spacing1.widthAnchor.constraint(equalToConstant: 0.5),
-            spacing2.widthAnchor.constraint(equalToConstant: 0.5)
         ]
         NSLayoutConstraint.activate(constraint)
     }
@@ -180,7 +129,6 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.size.width*107/375, height: 67)
     }
-    var lastIndexActive: IndexPath = [1 ,0]
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //Create Gradient color
         if self.lastIndexActive != indexPath {
@@ -204,43 +152,25 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
         diamondView.isHidden = false
         rubyView.isHidden = true
         roseView.isHidden = true
-        rect1.isHidden = false
-        rect2.isHidden = true
-        rect3.isHidden = true
-        diamondButton.titleLabel?.font = UIFont(name: "Sarabun-SemiBold", size: 14)
-        diamondButton.setTitleColor(.red, for: .normal)
-        rubyButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
-        rubyButton.setTitleColor(.black, for: .normal)
-        roseButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
-        roseButton.setTitleColor(.black, for: .normal)
+        customTabView.diamondTabView.selectedItem()
+        customTabView.rubyTabView.unselectedItem()
+        customTabView.roseTabView.unselectedItem()
     }
     @objc func rubyTopup() {
         diamondView.isHidden = true
         rubyView.isHidden = false
         roseView.isHidden = true
-        rect1.isHidden = true
-        rect2.isHidden = false
-        rect3.isHidden = true
-        rubyButton.titleLabel?.font = UIFont(name: "Sarabun-SemiBold", size: 14)
-        rubyButton.setTitleColor(.red, for: .normal)
-        diamondButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
-        diamondButton.setTitleColor(.black, for: .normal)
-        roseButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
-        roseButton.setTitleColor(.black, for: .normal)
+        customTabView.diamondTabView.unselectedItem()
+        customTabView.rubyTabView.selectedItem()
+        customTabView.roseTabView.unselectedItem()
     }
     @objc func roseTopup() {
         diamondView.isHidden = true
         rubyView.isHidden = true
         roseView.isHidden = false
-        rect1.isHidden = true
-        rect2.isHidden = true
-        rect3.isHidden = false
-        roseButton.titleLabel?.font = UIFont(name: "Sarabun-SemiBold", size: 14)
-        roseButton.setTitleColor(.red, for: .normal)
-        rubyButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
-        rubyButton.setTitleColor(.black, for: .normal)
-        diamondButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
-        diamondButton.setTitleColor(.black, for: .normal)
+        customTabView.diamondTabView.unselectedItem()
+        customTabView.rubyTabView.unselectedItem()
+        customTabView.roseTabView.selectedItem()
     }
 }
 
@@ -259,10 +189,6 @@ extension UICollectionViewCell {
         // This makes it left to right, default is top to bottom
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
-        
-//        gradientLayer.type = .axial
-//        gradientLayer.locations = [0, 0.5, 1]
-
         let renderer = UIGraphicsImageRenderer(bounds: bounds)
 
         return renderer.image { ctx in
