@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -34,6 +35,20 @@
                         <action selector="topUpAction:" destination="-1" eventType="touchUpInside" id="evD-0i-kGE"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3G-Gp-DOK">
+                    <rect key="frame" x="136" y="232" width="142" height="31"/>
+                    <color key="backgroundColor" name="SelectedColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="oiM-2P-99g"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Livestream">
+                        <color key="baseForegroundColor" name="ColorGr3"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="livestreamCenterAction:" destination="-1" eventType="touchUpInside" id="y3X-E3-JPs"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,12 +56,21 @@
                 <constraint firstItem="8VH-0l-ufn" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Rze-de-pkk"/>
                 <constraint firstItem="8VH-0l-ufn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WRA-nL-TFx"/>
                 <constraint firstItem="yPi-7d-lk5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="ceh-yq-O6h"/>
+                <constraint firstItem="e3G-Gp-DOK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="136" id="fJS-LS-7HW"/>
+                <constraint firstItem="e3G-Gp-DOK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iRo-c6-3fT"/>
+                <constraint firstItem="e3G-Gp-DOK" firstAttribute="top" secondItem="yPi-7d-lk5" secondAttribute="bottom" constant="77" id="qm7-2w-VtA"/>
                 <constraint firstItem="yPi-7d-lk5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uY1-y7-t41"/>
             </constraints>
             <point key="canvasLocation" x="132" y="100"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="ColorGr3">
+            <color red="0.84313725490196079" green="0.69411764705882351" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SelectedColor">
+            <color red="1" green="0.89499998092651367" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

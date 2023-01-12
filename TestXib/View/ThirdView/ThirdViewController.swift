@@ -52,7 +52,6 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
         customTabView.myTabItem[0].myButton.addTarget(self, action: #selector(diamondTopupp), for: .touchUpInside)
         customTabView.myTabItem[1].myButton.addTarget(self, action: #selector(rubyTopup), for: .touchUpInside)
         customTabView.myTabItem[2].myButton.addTarget(self, action: #selector(roseTopup), for: .touchUpInside)
-//        let gradientText = UIButton.gradientImage(bounds: customTabView.myTabItem[0].myButton.bounds, colors: [UIColor(named: "StartColorTextGradient")!, UIColor(named: "EndColorTextGradient")!])
         customTabView.myTabItem[0].myButton.setTitleColor(UIColor(patternImage: UIImage(named: "GradientText")!), for: .normal)
         customTabView.myTabItem[0].myButton.titleLabel?.font = UIFont(name: "Sarabun-SemiBold", size: 14)
         

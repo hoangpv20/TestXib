@@ -20,18 +20,6 @@ class SecondViewController: UIViewController {
         let backButton = UIBarButtonItem(title: " ", style: .plain, target: self, action: nil)
         navigationItem.backBarButtonItem = backButton
         rankingButton.addTarget(self, action: #selector(bottomSheet), for: .touchUpInside)
-//        view.addSubview(mainImage)
-//        mainImage.translatesAutoresizingMaskIntoConstraints = false
-//        mainImage.image = UIImage(named: "mainScreen")
-//        mainImage.bringSubviewToFront(rankingButton)
-//
-//        let constraint = [
-//            mainImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
-//            mainImage.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
-//            mainImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
-//            mainImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-//        ]
-//        NSLayoutConstraint.activate(constraint)
     }
     
     @objc func bottomSheet() {
@@ -45,6 +33,10 @@ class SecondViewController: UIViewController {
     @IBAction func topUpAction(_ sender: Any) {
         let thirdViewController = ThirdViewController()
         navigationController?.pushViewController(thirdViewController, animated: true)
+    }
+    @IBAction func livestreamCenterAction(_ sender: Any) {
+        let livestreamCenterViewController = StreamerRecordViewController()
+        navigationController?.pushViewController(livestreamCenterViewController, animated: true)
     }
     
 }
