@@ -44,7 +44,7 @@ class TabItem: UIView {
     }
     func selectedItem() {
         footRect.isHidden = false
-        let gradientText = UIImage.gradientImage(bounds: myButton.bounds, colors: [.systemBlue, .systemRed])
+        let gradientText = UIImage.gradientImage(bounds: myButton.bounds, colors: [UIColor(named: "StartColorTextGradient")!, UIColor(named: "EndColorTextGradient")!])
         myButton.setTitleColor(UIColor(patternImage: gradientText), for: .normal)
         myButton.titleLabel?.font = UIFont(name: "Sarabun-SemiBold", size: 14)
     }
