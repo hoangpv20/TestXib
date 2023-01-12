@@ -9,8 +9,6 @@ import UIKit
 
 class TabbarGradient: UIView {
     let myStackView = UIStackView()
-    let spacingView = SpacingItem()
-    let spacingView2 = SpacingItem()
     var myTabItem = [TabItem]()
     var mySpacingItem = [SpacingItem]()
     
@@ -19,7 +17,7 @@ class TabbarGradient: UIView {
         for _ in 0...2 {
             myTabItem.append(TabItem())
         }
-        for _ in 0...1 {
+        for _ in 0...(myTabItem.count - 2) {
             mySpacingItem.append(SpacingItem())
         }
         setupView()
