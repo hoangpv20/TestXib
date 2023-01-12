@@ -53,7 +53,6 @@ class TabItem: UIView {
         myButton.setTitleColor(UIColor(named: "DiamondTextColor"), for: .normal)
         myButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
     }
-
 }
 extension UIImage {
     static func gradientImage(bounds: CGRect, colors: [UIColor]) -> UIImage {

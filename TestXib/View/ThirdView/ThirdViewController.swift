@@ -52,7 +52,8 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
         customTabView.myTabItem[0].myButton.addTarget(self, action: #selector(diamondTopupp), for: .touchUpInside)
         customTabView.myTabItem[1].myButton.addTarget(self, action: #selector(rubyTopup), for: .touchUpInside)
         customTabView.myTabItem[2].myButton.addTarget(self, action: #selector(roseTopup), for: .touchUpInside)
-        customTabView.myTabItem[0].myButton.setTitleColor(.systemRed, for: .normal)
+//        let gradientText = UIButton.gradientImage(bounds: customTabView.myTabItem[0].myButton.bounds, colors: [UIColor(named: "StartColorTextGradient")!, UIColor(named: "EndColorTextGradient")!])
+        customTabView.myTabItem[0].myButton.setTitleColor(UIColor(patternImage: UIImage(named: "GradientText")!), for: .normal)
         customTabView.myTabItem[0].myButton.titleLabel?.font = UIFont(name: "Sarabun-SemiBold", size: 14)
         
         rubyView.isHidden = true
@@ -180,7 +181,7 @@ struct Diamond {
     var forSale: Bool
 }
 
-extension UICollectionViewCell {
+extension UICollectionViewCell{
     static func gradientImage(bounds: CGRect, colors: [UIColor]) -> UIImage {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
@@ -196,3 +197,20 @@ extension UICollectionViewCell {
         }
     }
 }
+extension UIButton {
+    static func gradientImage(bounds: CGRect, colors: [UIColor]) -> UIImage {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
+        gradientLayer.colors = colors.map(\.cgColor)
+        // This makes it left to right, default is top to bottom
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+
+        return renderer.image { ctx in
+            gradientLayer.render(in: ctx.cgContext)
+        }
+    }
+}
+
