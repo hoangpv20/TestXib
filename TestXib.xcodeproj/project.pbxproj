@@ -14,6 +14,10 @@
 		84A3AFA6296554F900F85434 /* DiamondCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A3AFA4296554F900F85434 /* DiamondCollectionViewCell.xib */; };
 		84B8B982296ECC90007F3C48 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8B981296ECC90007F3C48 /* TabItem.swift */; };
 		84B8B984296ECCC2007F3C48 /* TabbarGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8B983296ECCC2007F3C48 /* TabbarGradient.swift */; };
+		84B8B987296FA777007F3C48 /* DiamondTopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8B986296FA777007F3C48 /* DiamondTopupView.swift */; };
+		84B8B989296FA78C007F3C48 /* RubyTopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8B988296FA78C007F3C48 /* RubyTopupView.swift */; };
+		84B8B98B296FA7A3007F3C48 /* RoseTopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8B98A296FA7A3007F3C48 /* RoseTopupView.swift */; };
+		84B8B991296FE712007F3C48 /* SpacingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8B990296FE711007F3C48 /* SpacingItem.swift */; };
 		84BA000029542C5200CD858F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BAFFFF29542C5200CD858F /* ViewController.swift */; };
 		84BA000529542C5300CD858F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BA000429542C5300CD858F /* Assets.xcassets */; };
 		84BA000829542C5300CD858F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BA000629542C5300CD858F /* LaunchScreen.storyboard */; };
@@ -30,8 +34,6 @@
 		84BA0054295BF3C200CD858F /* Sarabun-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84BA0052295BF07A00CD858F /* Sarabun-Medium.ttf */; };
 		84BA0057295BFA0100CD858F /* Sarabun-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84BA0056295BFA0100CD858F /* Sarabun-Thin.ttf */; };
 		84BAFFFC29542C5200CD858F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BAFFFB29542C5200CD858F /* AppDelegate.swift */; };
-		84F4DEF52966CA5D00BDE0F1 /* DiamondTopu[ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4DEF32966CA5D00BDE0F1 /* DiamondTopu[ViewController.swift */; };
-		84F4DEF62966CA5D00BDE0F1 /* DiamondTopu[ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F4DEF42966CA5D00BDE0F1 /* DiamondTopu[ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,10 @@
 		84A3AFA4296554F900F85434 /* DiamondCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiamondCollectionViewCell.xib; sourceTree = "<group>"; };
 		84B8B981296ECC90007F3C48 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		84B8B983296ECCC2007F3C48 /* TabbarGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarGradient.swift; sourceTree = "<group>"; };
+		84B8B986296FA777007F3C48 /* DiamondTopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiamondTopupView.swift; sourceTree = "<group>"; };
+		84B8B988296FA78C007F3C48 /* RubyTopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubyTopupView.swift; sourceTree = "<group>"; };
+		84B8B98A296FA7A3007F3C48 /* RoseTopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoseTopupView.swift; sourceTree = "<group>"; };
+		84B8B990296FE711007F3C48 /* SpacingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingItem.swift; sourceTree = "<group>"; };
 		84BA000429542C5300CD858F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84BA000729542C5300CD858F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84BA000929542C5300CD858F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,8 +66,6 @@
 		84BAFFF829542C5200CD858F /* TestXib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestXib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BAFFFB29542C5200CD858F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BAFFFF29542C5200CD858F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		84F4DEF32966CA5D00BDE0F1 /* DiamondTopu[ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiamondTopu[ViewController.swift"; sourceTree = "<group>"; };
-		84F4DEF42966CA5D00BDE0F1 /* DiamondTopu[ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "DiamondTopu[ViewController.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 			children = (
 				84B8B981296ECC90007F3C48 /* TabItem.swift */,
 				84B8B983296ECCC2007F3C48 /* TabbarGradient.swift */,
+				84B8B990296FE711007F3C48 /* SpacingItem.swift */,
 			);
 			path = CustomTabView;
 			sourceTree = "<group>";
@@ -113,8 +118,9 @@
 		84B8B985296ECCE5007F3C48 /* CustomTopupView */ = {
 			isa = PBXGroup;
 			children = (
-				84F4DEF42966CA5D00BDE0F1 /* DiamondTopu[ViewController.xib */,
-				84F4DEF32966CA5D00BDE0F1 /* DiamondTopu[ViewController.swift */,
+				84B8B986296FA777007F3C48 /* DiamondTopupView.swift */,
+				84B8B988296FA78C007F3C48 /* RubyTopupView.swift */,
+				84B8B98A296FA7A3007F3C48 /* RoseTopupView.swift */,
 			);
 			path = CustomTopupView;
 			sourceTree = "<group>";
@@ -239,7 +245,6 @@
 				84BA00162954307E00CD858F /* AuthViewController.xib in Resources */,
 				84BA000829542C5300CD858F /* LaunchScreen.storyboard in Resources */,
 				84BA0057295BFA0100CD858F /* Sarabun-Thin.ttf in Resources */,
-				84F4DEF62966CA5D00BDE0F1 /* DiamondTopu[ViewController.xib in Resources */,
 				84BA0054295BF3C200CD858F /* Sarabun-Medium.ttf in Resources */,
 				84A3AF9A295D742D00F85434 /* Sarabun-SemiBold.ttf in Resources */,
 				84BA000529542C5300CD858F /* Assets.xcassets in Resources */,
@@ -254,6 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B8B989296FA78C007F3C48 /* RubyTopupView.swift in Sources */,
+				84B8B987296FA777007F3C48 /* DiamondTopupView.swift in Sources */,
+				84B8B991296FE712007F3C48 /* SpacingItem.swift in Sources */,
 				84BA003D29545DB800CD858F /* SecondViewController.swift in Sources */,
 				84BA0047295946BB00CD858F /* BottomSheetViewController.swift in Sources */,
 				84B8B984296ECCC2007F3C48 /* TabbarGradient.swift in Sources */,
@@ -262,9 +270,9 @@
 				84BA00152954307E00CD858F /* AuthViewController.swift in Sources */,
 				84A3AFA5296554F900F85434 /* DiamondCollectionViewCell.swift in Sources */,
 				84BA004B2959719600CD858F /* CustomCell.swift in Sources */,
+				84B8B98B296FA7A3007F3C48 /* RoseTopupView.swift in Sources */,
 				84BAFFFC29542C5200CD858F /* AppDelegate.swift in Sources */,
 				84B8B982296ECC90007F3C48 /* TabItem.swift in Sources */,
-				84F4DEF52966CA5D00BDE0F1 /* DiamondTopu[ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

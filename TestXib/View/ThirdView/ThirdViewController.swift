@@ -31,7 +31,6 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
         Diamond(diamondNumber: "2499", diamondPrice: "100.000 vnd", forSale: true),
         Diamond(diamondNumber: "6999", diamondPrice: "100.000 vnd", forSale: true),
     ]
-    
     var lastIndexActive: IndexPath = [1 ,0]
     
     override func viewDidLoad() {
@@ -50,16 +49,16 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         view.addSubview(customTabView)
         customTabView.translatesAutoresizingMaskIntoConstraints = false
-        customTabView.diamondTabView.myButton.addTarget(self, action: #selector(diamondTopupp), for: .touchUpInside)
-        customTabView.rubyTabView.myButton.addTarget(self, action: #selector(rubyTopup), for: .touchUpInside)
-        customTabView.roseTabView.myButton.addTarget(self, action: #selector(roseTopup), for: .touchUpInside)
-        customTabView.diamondTabView.myButton.setTitleColor(.red, for: .normal)
-        customTabView.diamondTabView.myButton.titleLabel?.font = UIFont(name: "Sarabun-SemiBold", size: 14)
+        customTabView.myTabItem[0].myButton.addTarget(self, action: #selector(diamondTopupp), for: .touchUpInside)
+        customTabView.myTabItem[1].myButton.addTarget(self, action: #selector(rubyTopup), for: .touchUpInside)
+        customTabView.myTabItem[2].myButton.addTarget(self, action: #selector(roseTopup), for: .touchUpInside)
+        customTabView.myTabItem[0].myButton.setTitleColor(.systemRed, for: .normal)
+        customTabView.myTabItem[0].myButton.titleLabel?.font = UIFont(name: "Sarabun-SemiBold", size: 14)
         
         rubyView.isHidden = true
         roseView.isHidden = true
-        customTabView.roseTabView.footRect.isHidden = true
-        customTabView.rubyTabView.footRect.isHidden = true
+        customTabView.myTabItem[2].footRect.isHidden = true
+        customTabView.myTabItem[1].footRect.isHidden = true
         
         //Custom MyDiamond frame
         diamondView.addSubview(myDiamond)
@@ -86,6 +85,7 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
         subcript.translatesAutoresizingMaskIntoConstraints = false
         subcript.text = "Nạp kim cương"
         subcript.font = UIFont(name: "Sarabun-Regular", size: 18)
+        subcript.textColor = UIColor(named: "SubcriptColor")
         
         let constraint = [
             
@@ -152,25 +152,25 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
         diamondView.isHidden = false
         rubyView.isHidden = true
         roseView.isHidden = true
-        customTabView.diamondTabView.selectedItem()
-        customTabView.rubyTabView.unselectedItem()
-        customTabView.roseTabView.unselectedItem()
+        customTabView.myTabItem[0].selectedItem()
+        customTabView.myTabItem[1].unselectedItem()
+        customTabView.myTabItem[2].unselectedItem()
     }
     @objc func rubyTopup() {
         diamondView.isHidden = true
         rubyView.isHidden = false
         roseView.isHidden = true
-        customTabView.diamondTabView.unselectedItem()
-        customTabView.rubyTabView.selectedItem()
-        customTabView.roseTabView.unselectedItem()
+        customTabView.myTabItem[0].unselectedItem()
+        customTabView.myTabItem[1].selectedItem()
+        customTabView.myTabItem[2].unselectedItem()
     }
     @objc func roseTopup() {
         diamondView.isHidden = true
         rubyView.isHidden = true
         roseView.isHidden = false
-        customTabView.diamondTabView.unselectedItem()
-        customTabView.rubyTabView.unselectedItem()
-        customTabView.roseTabView.selectedItem()
+        customTabView.myTabItem[0].unselectedItem()
+        customTabView.myTabItem[1].unselectedItem()
+        customTabView.myTabItem[2].selectedItem()
     }
 }
 

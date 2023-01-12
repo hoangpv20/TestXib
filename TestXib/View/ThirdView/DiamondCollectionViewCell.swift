@@ -17,7 +17,9 @@ class DiamondCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         price.font = UIFont(name: "Sarabun-Regular", size: 12)
+        price.textColor = UIColor(named: "DiamondTextColor")
         numberOfDiamonds.font = UIFont(name: "Sarabun-SemiBold", size: 20)
+        numberOfDiamonds.textColor = UIColor(named: "DiamondTextColor")
     }
     func loadData(item: Diamond) {
         price.text = item.diamondPrice

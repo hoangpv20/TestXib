@@ -9,14 +9,19 @@ import UIKit
 
 class TabbarGradient: UIView {
     let myStackView = UIStackView()
-    let diamondTabView = TabItem()
-    let rubyTabView = TabItem()
-    let roseTabView = TabItem()
-    let spacingView = UIView()
-    let spacingView2 = UIView()
+    let spacingView = SpacingItem()
+    let spacingView2 = SpacingItem()
+    var myTabItem = [TabItem]()
+    var mySpacingItem = [SpacingItem]()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        for _ in 0...2 {
+            myTabItem.append(TabItem())
+        }
+        for _ in 0...1 {
+            mySpacingItem.append(SpacingItem())
+        }
         setupView()
     }
     required init?(coder: NSCoder) {
@@ -30,25 +35,22 @@ class TabbarGradient: UIView {
         myStackView.distribution = UIStackView.Distribution.fill
         myStackView.spacing = 0
         
-        myStackView.addArrangedSubview(diamondTabView)
-        diamondTabView.translatesAutoresizingMaskIntoConstraints = false
-        diamondTabView.changeTitle(title: "Kim cương")
+        myStackView.addArrangedSubview(myTabItem[0])
+        myTabItem[0].changeTitle(title: "Kim cương")
+        myTabItem[1].changeTitle(title: "Ruby")
+        myTabItem[2].changeTitle(title: "Hoa hồng")
         
-        myStackView.addArrangedSubview(spacingView)
-        spacingView.translatesAutoresizingMaskIntoConstraints = false
-        
-        spacingView.backgroundColor = .black
-        myStackView.addArrangedSubview(rubyTabView)
-        rubyTabView.translatesAutoresizingMaskIntoConstraints = false
-        rubyTabView.changeTitle(title: "Ruby")
-        
-        myStackView.addArrangedSubview(spacingView2)
-        spacingView2.translatesAutoresizingMaskIntoConstraints = false
-        
-        spacingView2.backgroundColor = .black
-        myStackView.addArrangedSubview(roseTabView)
-        roseTabView.translatesAutoresizingMaskIntoConstraints = false
-        roseTabView.changeTitle(title: "Hoa hồng")
+        for i in 1...myTabItem.count-1 {
+            myStackView.addArrangedSubview(mySpacingItem[i-1])
+            myStackView.addArrangedSubview(myTabItem[i])
+            NSLayoutConstraint.activate([
+                mySpacingItem[i-1].heightAnchor.constraint(equalTo: myStackView.heightAnchor),
+                mySpacingItem[i-1].widthAnchor.constraint(equalToConstant: 0.5),
+                
+                myTabItem[i].heightAnchor.constraint(equalTo: myStackView.heightAnchor),
+                myTabItem[i].widthAnchor.constraint(equalTo: myTabItem[0].widthAnchor),
+            ])
+        }
         
         let constraint = [
             myStackView.topAnchor.constraint(equalTo: topAnchor),
@@ -56,20 +58,9 @@ class TabbarGradient: UIView {
             myStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             myStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
             
-            diamondTabView.heightAnchor.constraint(equalTo: myStackView.heightAnchor),
-            diamondTabView.widthAnchor.constraint(equalToConstant: (frame.size.width-1)/3),
+            myTabItem[0].heightAnchor.constraint(equalTo: myStackView.heightAnchor),
+            myTabItem[0].widthAnchor.constraint(equalToConstant: (frame.size.width-CGFloat((mySpacingItem.count))*0.5)/CGFloat(myTabItem.count)),
             
-            spacingView.heightAnchor.constraint(equalTo: myStackView.heightAnchor),
-            spacingView.widthAnchor.constraint(equalToConstant: 0.5),
-            
-            rubyTabView.heightAnchor.constraint(equalTo: myStackView.heightAnchor),
-            rubyTabView.widthAnchor.constraint(equalTo: diamondTabView.widthAnchor),
-            
-            spacingView2.heightAnchor.constraint(equalTo: myStackView.heightAnchor),
-            spacingView2.widthAnchor.constraint(equalToConstant: 0.5),
-            
-            roseTabView.heightAnchor.constraint(equalTo: myStackView.heightAnchor),
-            roseTabView.widthAnchor.constraint(equalTo: diamondTabView.widthAnchor),
         ]
         NSLayoutConstraint.activate(constraint)
     }

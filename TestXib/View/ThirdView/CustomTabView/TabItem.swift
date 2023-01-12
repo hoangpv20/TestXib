@@ -21,7 +21,7 @@ class TabItem: UIView {
     }
     private func setupView() {
         backgroundColor = .clear
-        myButton.setTitleColor(.black, for: .normal)
+        myButton.setTitleColor(UIColor(named: "DiamondTextColor"), for: .normal)
         myButton.translatesAutoresizingMaskIntoConstraints = false
         myButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
         addSubview(myButton)
@@ -44,13 +44,30 @@ class TabItem: UIView {
     }
     func selectedItem() {
         footRect.isHidden = false
-        myButton.setTitleColor(.red, for: .normal)
+        let gradientText = UIImage.gradientImage(bounds: myButton.bounds, colors: [.systemBlue, .systemRed])
+        myButton.setTitleColor(UIColor(patternImage: gradientText), for: .normal)
         myButton.titleLabel?.font = UIFont(name: "Sarabun-SemiBold", size: 14)
     }
     func unselectedItem() {
         footRect.isHidden = true
-        myButton.setTitleColor(.black, for: .normal)
+        myButton.setTitleColor(UIColor(named: "DiamondTextColor"), for: .normal)
         myButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
     }
 
+}
+extension UIImage {
+    static func gradientImage(bounds: CGRect, colors: [UIColor]) -> UIImage {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
+        gradientLayer.colors = colors.map(\.cgColor)
+        // This makes it left to right, default is top to bottom
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+
+        return renderer.image { ctx in
+            gradientLayer.render(in: ctx.cgContext)
+        }
+    }
 }
