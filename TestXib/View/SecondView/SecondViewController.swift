@@ -35,7 +35,7 @@ class SecondViewController: UIViewController {
         navigationController?.pushViewController(thirdViewController, animated: true)
     }
     @IBAction func livestreamCenterAction(_ sender: Any) {
-        let livestreamCenterViewController = StreamerRecordViewController()
+        let livestreamCenterViewController = LivestreamCenterViewController()
         navigationController?.pushViewController(livestreamCenterViewController, animated: true)
     }
     

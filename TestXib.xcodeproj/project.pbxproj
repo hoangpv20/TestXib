@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		849562CE29753DF300A4740D /* MyRecordVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849562CD29753DF300A4740D /* MyRecordVideoView.swift */; };
+		849562D22975403700A4740D /* MyRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849562D02975403700A4740D /* MyRecordTableViewCell.swift */; };
+		849562D32975403700A4740D /* MyRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849562D12975403700A4740D /* MyRecordTableViewCell.xib */; };
+		849562DA29755A0300A4740D /* MyUploadVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849562D929755A0300A4740D /* MyUploadVideoView.swift */; };
+		849562DC29755A3700A4740D /* MyUploadVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849562DB29755A3700A4740D /* MyUploadVideoView.xib */; };
+		849562DF29755E4F00A4740D /* MyUploadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849562DD29755E4F00A4740D /* MyUploadTableViewCell.swift */; };
+		849562E029755E4F00A4740D /* MyUploadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849562DE29755E4F00A4740D /* MyUploadTableViewCell.xib */; };
 		84A3AF9A295D742D00F85434 /* Sarabun-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3AF99295D742D00F85434 /* Sarabun-SemiBold.ttf */; };
 		84A3AF9D295D94DA00F85434 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AF9B295D94DA00F85434 /* ThirdViewController.swift */; };
 		84A3AF9E295D94DA00F85434 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A3AF9C295D94DA00F85434 /* ThirdViewController.xib */; };
@@ -20,10 +27,12 @@
 		84B8B991296FE712007F3C48 /* SpacingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8B990296FE711007F3C48 /* SpacingItem.swift */; };
 		84B8B99529701757007F3C48 /* LivestreamCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8B99329701757007F3C48 /* LivestreamCenterViewController.swift */; };
 		84B8B99629701757007F3C48 /* LivestreamCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B8B99429701757007F3C48 /* LivestreamCenterViewController.xib */; };
-		84B8B99929701C24007F3C48 /* StreamerRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8B99729701C24007F3C48 /* StreamerRecordViewController.swift */; };
-		84B8B99A29701C24007F3C48 /* StreamerRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B8B99829701C24007F3C48 /* StreamerRecordViewController.xib */; };
 		84B8B99D29701D8C007F3C48 /* VideoRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8B99B29701D8C007F3C48 /* VideoRecordViewController.swift */; };
 		84B8B99E29701D8C007F3C48 /* VideoRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B8B99C29701D8C007F3C48 /* VideoRecordViewController.xib */; };
+		84B8B9A12974F24A007F3C48 /* LiveStreamCenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8B99F2974F24A007F3C48 /* LiveStreamCenterTableViewCell.swift */; };
+		84B8B9A22974F24A007F3C48 /* LiveStreamCenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B8B9A02974F24A007F3C48 /* LiveStreamCenterTableViewCell.xib */; };
+		84B8B9A629752405007F3C48 /* RecordVideoTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8B9A529752405007F3C48 /* RecordVideoTabbar.swift */; };
+		84B8B9A8297525C2007F3C48 /* RecordVideoTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8B9A7297525C2007F3C48 /* RecordVideoTabItem.swift */; };
 		84BA000029542C5200CD858F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BAFFFF29542C5200CD858F /* ViewController.swift */; };
 		84BA000529542C5300CD858F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BA000429542C5300CD858F /* Assets.xcassets */; };
 		84BA000829542C5300CD858F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BA000629542C5300CD858F /* LaunchScreen.storyboard */; };
@@ -43,6 +52,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		849562CD29753DF300A4740D /* MyRecordVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordVideoView.swift; sourceTree = "<group>"; };
+		849562D02975403700A4740D /* MyRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordTableViewCell.swift; sourceTree = "<group>"; };
+		849562D12975403700A4740D /* MyRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyRecordTableViewCell.xib; sourceTree = "<group>"; };
+		849562D929755A0300A4740D /* MyUploadVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUploadVideoView.swift; sourceTree = "<group>"; };
+		849562DB29755A3700A4740D /* MyUploadVideoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyUploadVideoView.xib; sourceTree = "<group>"; };
+		849562DD29755E4F00A4740D /* MyUploadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUploadTableViewCell.swift; sourceTree = "<group>"; };
+		849562DE29755E4F00A4740D /* MyUploadTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyUploadTableViewCell.xib; sourceTree = "<group>"; };
 		84A3AF99295D742D00F85434 /* Sarabun-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sarabun-SemiBold.ttf"; sourceTree = "<group>"; };
 		84A3AF9B295D94DA00F85434 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		84A3AF9C295D94DA00F85434 /* ThirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
@@ -56,10 +72,12 @@
 		84B8B990296FE711007F3C48 /* SpacingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingItem.swift; sourceTree = "<group>"; };
 		84B8B99329701757007F3C48 /* LivestreamCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivestreamCenterViewController.swift; sourceTree = "<group>"; };
 		84B8B99429701757007F3C48 /* LivestreamCenterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LivestreamCenterViewController.xib; sourceTree = "<group>"; };
-		84B8B99729701C24007F3C48 /* StreamerRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamerRecordViewController.swift; sourceTree = "<group>"; };
-		84B8B99829701C24007F3C48 /* StreamerRecordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreamerRecordViewController.xib; sourceTree = "<group>"; };
 		84B8B99B29701D8C007F3C48 /* VideoRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordViewController.swift; sourceTree = "<group>"; };
 		84B8B99C29701D8C007F3C48 /* VideoRecordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoRecordViewController.xib; sourceTree = "<group>"; };
+		84B8B99F2974F24A007F3C48 /* LiveStreamCenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamCenterTableViewCell.swift; sourceTree = "<group>"; };
+		84B8B9A02974F24A007F3C48 /* LiveStreamCenterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveStreamCenterTableViewCell.xib; sourceTree = "<group>"; };
+		84B8B9A529752405007F3C48 /* RecordVideoTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVideoTabbar.swift; sourceTree = "<group>"; };
+		84B8B9A7297525C2007F3C48 /* RecordVideoTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVideoTabItem.swift; sourceTree = "<group>"; };
 		84BA000429542C5300CD858F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84BA000729542C5300CD858F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84BA000929542C5300CD858F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +109,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		849562CF29753FBC00A4740D /* MyRecordVideoScreen */ = {
+			isa = PBXGroup;
+			children = (
+				849562CD29753DF300A4740D /* MyRecordVideoView.swift */,
+				849562D02975403700A4740D /* MyRecordTableViewCell.swift */,
+				849562D12975403700A4740D /* MyRecordTableViewCell.xib */,
+			);
+			path = MyRecordVideoScreen;
+			sourceTree = "<group>";
+		};
+		849562D42975596100A4740D /* MyUploadVideoScreen */ = {
+			isa = PBXGroup;
+			children = (
+				849562D929755A0300A4740D /* MyUploadVideoView.swift */,
+				849562DB29755A3700A4740D /* MyUploadVideoView.xib */,
+				849562DD29755E4F00A4740D /* MyUploadTableViewCell.swift */,
+				849562DE29755E4F00A4740D /* MyUploadTableViewCell.xib */,
+			);
+			path = MyUploadVideoScreen;
+			sourceTree = "<group>";
+		};
 		84A3AFA12965545700F85434 /* SecondView */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,14 +179,34 @@
 		84B8B99229701711007F3C48 /* LiveStreamCenter */ = {
 			isa = PBXGroup;
 			children = (
-				84B8B99329701757007F3C48 /* LivestreamCenterViewController.swift */,
-				84B8B99429701757007F3C48 /* LivestreamCenterViewController.xib */,
-				84B8B99729701C24007F3C48 /* StreamerRecordViewController.swift */,
-				84B8B99829701C24007F3C48 /* StreamerRecordViewController.xib */,
-				84B8B99B29701D8C007F3C48 /* VideoRecordViewController.swift */,
-				84B8B99C29701D8C007F3C48 /* VideoRecordViewController.xib */,
+				84B8B9A32974F25F007F3C48 /* LiveStreamCenterScreen */,
+				84B8B9A4297523AB007F3C48 /* VideoRecordScreen */,
 			);
 			path = LiveStreamCenter;
+			sourceTree = "<group>";
+		};
+		84B8B9A32974F25F007F3C48 /* LiveStreamCenterScreen */ = {
+			isa = PBXGroup;
+			children = (
+				84B8B99329701757007F3C48 /* LivestreamCenterViewController.swift */,
+				84B8B99429701757007F3C48 /* LivestreamCenterViewController.xib */,
+				84B8B99F2974F24A007F3C48 /* LiveStreamCenterTableViewCell.swift */,
+				84B8B9A02974F24A007F3C48 /* LiveStreamCenterTableViewCell.xib */,
+			);
+			path = LiveStreamCenterScreen;
+			sourceTree = "<group>";
+		};
+		84B8B9A4297523AB007F3C48 /* VideoRecordScreen */ = {
+			isa = PBXGroup;
+			children = (
+				84B8B99B29701D8C007F3C48 /* VideoRecordViewController.swift */,
+				84B8B99C29701D8C007F3C48 /* VideoRecordViewController.xib */,
+				84B8B9A529752405007F3C48 /* RecordVideoTabbar.swift */,
+				84B8B9A7297525C2007F3C48 /* RecordVideoTabItem.swift */,
+				849562CF29753FBC00A4740D /* MyRecordVideoScreen */,
+				849562D42975596100A4740D /* MyUploadVideoScreen */,
+			);
+			path = VideoRecordScreen;
 			sourceTree = "<group>";
 		};
 		84BA004F295BEFE800CD858F /* View */ = {
@@ -262,7 +321,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B8B99A29701C24007F3C48 /* StreamerRecordViewController.xib in Resources */,
 				84A3AFA6296554F900F85434 /* DiamondCollectionViewCell.xib in Resources */,
 				84BA0018295431D000CD858F /* ViewController.xib in Resources */,
 				84B8B99E29701D8C007F3C48 /* VideoRecordViewController.xib in Resources */,
@@ -270,13 +328,17 @@
 				84A3AF9E295D94DA00F85434 /* ThirdViewController.xib in Resources */,
 				84BA0053295BF3BE00CD858F /* Sarabun-Regular.ttf in Resources */,
 				84B8B99629701757007F3C48 /* LivestreamCenterViewController.xib in Resources */,
+				84B8B9A22974F24A007F3C48 /* LiveStreamCenterTableViewCell.xib in Resources */,
 				84BA004C2959719600CD858F /* CustomCell.xib in Resources */,
 				84BA00162954307E00CD858F /* AuthViewController.xib in Resources */,
 				84BA000829542C5300CD858F /* LaunchScreen.storyboard in Resources */,
+				849562DC29755A3700A4740D /* MyUploadVideoView.xib in Resources */,
 				84BA0057295BFA0100CD858F /* Sarabun-Thin.ttf in Resources */,
 				84BA0054295BF3C200CD858F /* Sarabun-Medium.ttf in Resources */,
+				849562D32975403700A4740D /* MyRecordTableViewCell.xib in Resources */,
 				84A3AF9A295D742D00F85434 /* Sarabun-SemiBold.ttf in Resources */,
 				84BA000529542C5300CD858F /* Assets.xcassets in Resources */,
+				849562E029755E4F00A4740D /* MyUploadTableViewCell.xib in Resources */,
 				84BA003E29545DB800CD858F /* SecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,18 +351,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B8B989296FA78C007F3C48 /* RubyTopupView.swift in Sources */,
+				84B8B9A8297525C2007F3C48 /* RecordVideoTabItem.swift in Sources */,
 				84B8B987296FA777007F3C48 /* DiamondTopupView.swift in Sources */,
 				84B8B99529701757007F3C48 /* LivestreamCenterViewController.swift in Sources */,
 				84B8B991296FE712007F3C48 /* SpacingItem.swift in Sources */,
 				84BA003D29545DB800CD858F /* SecondViewController.swift in Sources */,
 				84BA0047295946BB00CD858F /* BottomSheetViewController.swift in Sources */,
-				84B8B99929701C24007F3C48 /* StreamerRecordViewController.swift in Sources */,
+				849562DA29755A0300A4740D /* MyUploadVideoView.swift in Sources */,
 				84B8B99D29701D8C007F3C48 /* VideoRecordViewController.swift in Sources */,
 				84B8B984296ECCC2007F3C48 /* TabbarGradient.swift in Sources */,
+				84B8B9A629752405007F3C48 /* RecordVideoTabbar.swift in Sources */,
 				84BA000029542C5200CD858F /* ViewController.swift in Sources */,
 				84A3AF9D295D94DA00F85434 /* ThirdViewController.swift in Sources */,
 				84BA00152954307E00CD858F /* AuthViewController.swift in Sources */,
+				849562CE29753DF300A4740D /* MyRecordVideoView.swift in Sources */,
+				849562DF29755E4F00A4740D /* MyUploadTableViewCell.swift in Sources */,
+				84B8B9A12974F24A007F3C48 /* LiveStreamCenterTableViewCell.swift in Sources */,
 				84A3AFA5296554F900F85434 /* DiamondCollectionViewCell.swift in Sources */,
+				849562D22975403700A4740D /* MyRecordTableViewCell.swift in Sources */,
 				84BA004B2959719600CD858F /* CustomCell.swift in Sources */,
 				84B8B98B296FA7A3007F3C48 /* RoseTopupView.swift in Sources */,
 				84BAFFFC29542C5200CD858F /* AppDelegate.swift in Sources */,
