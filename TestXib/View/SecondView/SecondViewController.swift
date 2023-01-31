@@ -19,6 +19,7 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         let backButton = UIBarButtonItem(title: " ", style: .plain, target: self, action: nil)
         navigationItem.backBarButtonItem = backButton
+        navigationItem.backBarButtonItem?.tintColor = .black
         rankingButton.addTarget(self, action: #selector(bottomSheet), for: .touchUpInside)
     }
     
@@ -35,8 +36,8 @@ class SecondViewController: UIViewController {
         navigationController?.pushViewController(thirdViewController, animated: true)
     }
     @IBAction func livestreamCenterAction(_ sender: Any) {
-        let livestreamCenterViewController = LivestreamCenterViewController()
-        navigationController?.pushViewController(livestreamCenterViewController, animated: true)
+        let personalViewController = TabbarViewController()
+        navigationController?.pushViewController(personalViewController, animated: true)
     }
     
 }

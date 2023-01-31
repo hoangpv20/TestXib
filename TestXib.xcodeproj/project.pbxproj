@@ -7,13 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		849562CE29753DF300A4740D /* MyRecordVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849562CD29753DF300A4740D /* MyRecordVideoView.swift */; };
 		849562D22975403700A4740D /* MyRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849562D02975403700A4740D /* MyRecordTableViewCell.swift */; };
 		849562D32975403700A4740D /* MyRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849562D12975403700A4740D /* MyRecordTableViewCell.xib */; };
 		849562DA29755A0300A4740D /* MyUploadVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849562D929755A0300A4740D /* MyUploadVideoView.swift */; };
-		849562DC29755A3700A4740D /* MyUploadVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849562DB29755A3700A4740D /* MyUploadVideoView.xib */; };
 		849562DF29755E4F00A4740D /* MyUploadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849562DD29755E4F00A4740D /* MyUploadTableViewCell.swift */; };
 		849562E029755E4F00A4740D /* MyUploadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849562DE29755E4F00A4740D /* MyUploadTableViewCell.xib */; };
+		849562E42976458F00A4740D /* EditDescriptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849562E22976458F00A4740D /* EditDescriptViewController.swift */; };
+		849562E52976458F00A4740D /* EditDescriptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849562E32976458F00A4740D /* EditDescriptViewController.xib */; };
+		849562E829768EB900A4740D /* EditObjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849562E629768EB900A4740D /* EditObjectCell.swift */; };
+		849562E929768EB900A4740D /* EditObjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849562E729768EB900A4740D /* EditObjectCell.xib */; };
+		849562ED297694F800A4740D /* EditObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849562EB297694F800A4740D /* EditObjectViewController.swift */; };
+		849562EE297694F800A4740D /* EditObjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849562EC297694F800A4740D /* EditObjectViewController.xib */; };
+		849562F229769D5B00A4740D /* PersonalAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849562F029769D5B00A4740D /* PersonalAccountViewController.swift */; };
+		849562F329769D5B00A4740D /* PersonalAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849562F129769D5B00A4740D /* PersonalAccountViewController.xib */; };
+		849CAFE92988B7B5003BD4FB /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CAFE82988B7B5003BD4FB /* TabbarViewController.swift */; };
+		849CAFEC2988B7FC003BD4FB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CAFEA2988B7FC003BD4FB /* HomeViewController.swift */; };
+		849CAFED2988B7FC003BD4FB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849CAFEB2988B7FC003BD4FB /* HomeViewController.xib */; };
+		849CAFF02988B814003BD4FB /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CAFEE2988B814003BD4FB /* FavoriteViewController.swift */; };
+		849CAFF12988B814003BD4FB /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849CAFEF2988B814003BD4FB /* FavoriteViewController.xib */; };
+		849CAFF42988B82B003BD4FB /* LiveStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CAFF22988B82B003BD4FB /* LiveStreamViewController.swift */; };
+		849CAFF52988B82B003BD4FB /* LiveStreamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849CAFF32988B82B003BD4FB /* LiveStreamViewController.xib */; };
+		849CAFF82988B83F003BD4FB /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CAFF62988B83F003BD4FB /* RankingViewController.swift */; };
+		849CAFF92988B83F003BD4FB /* RankingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849CAFF72988B83F003BD4FB /* RankingViewController.xib */; };
+		849CAFFB2988CFFB003BD4FB /* ConclusionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CAFFA2988CFFB003BD4FB /* ConclusionItem.swift */; };
+		849CAFFD2988F07D003BD4FB /* ConclusionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CAFFC2988F07D003BD4FB /* ConclusionView.swift */; };
+		849CAFFF2988FB18003BD4FB /* ConclusionSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CAFFE2988FB18003BD4FB /* ConclusionSpacing.swift */; };
+		849CB0062989133E003BD4FB /* PersonalAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CB0042989133E003BD4FB /* PersonalAccountTableViewCell.swift */; };
+		849CB0072989133E003BD4FB /* PersonalAccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849CB0052989133E003BD4FB /* PersonalAccountTableViewCell.xib */; };
 		84A3AF9A295D742D00F85434 /* Sarabun-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3AF99295D742D00F85434 /* Sarabun-SemiBold.ttf */; };
 		84A3AF9D295D94DA00F85434 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AF9B295D94DA00F85434 /* ThirdViewController.swift */; };
 		84A3AF9E295D94DA00F85434 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A3AF9C295D94DA00F85434 /* ThirdViewController.xib */; };
@@ -52,13 +72,33 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		849562CD29753DF300A4740D /* MyRecordVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordVideoView.swift; sourceTree = "<group>"; };
 		849562D02975403700A4740D /* MyRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordTableViewCell.swift; sourceTree = "<group>"; };
 		849562D12975403700A4740D /* MyRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyRecordTableViewCell.xib; sourceTree = "<group>"; };
 		849562D929755A0300A4740D /* MyUploadVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUploadVideoView.swift; sourceTree = "<group>"; };
-		849562DB29755A3700A4740D /* MyUploadVideoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyUploadVideoView.xib; sourceTree = "<group>"; };
 		849562DD29755E4F00A4740D /* MyUploadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUploadTableViewCell.swift; sourceTree = "<group>"; };
 		849562DE29755E4F00A4740D /* MyUploadTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyUploadTableViewCell.xib; sourceTree = "<group>"; };
+		849562E22976458F00A4740D /* EditDescriptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDescriptViewController.swift; sourceTree = "<group>"; };
+		849562E32976458F00A4740D /* EditDescriptViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditDescriptViewController.xib; sourceTree = "<group>"; };
+		849562E629768EB900A4740D /* EditObjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditObjectCell.swift; sourceTree = "<group>"; };
+		849562E729768EB900A4740D /* EditObjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditObjectCell.xib; sourceTree = "<group>"; };
+		849562EB297694F800A4740D /* EditObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditObjectViewController.swift; sourceTree = "<group>"; };
+		849562EC297694F800A4740D /* EditObjectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditObjectViewController.xib; sourceTree = "<group>"; };
+		849562F029769D5B00A4740D /* PersonalAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccountViewController.swift; sourceTree = "<group>"; };
+		849562F129769D5B00A4740D /* PersonalAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalAccountViewController.xib; sourceTree = "<group>"; };
+		849CAFE82988B7B5003BD4FB /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		849CAFEA2988B7FC003BD4FB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		849CAFEB2988B7FC003BD4FB /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		849CAFEE2988B814003BD4FB /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		849CAFEF2988B814003BD4FB /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
+		849CAFF22988B82B003BD4FB /* LiveStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamViewController.swift; sourceTree = "<group>"; };
+		849CAFF32988B82B003BD4FB /* LiveStreamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveStreamViewController.xib; sourceTree = "<group>"; };
+		849CAFF62988B83F003BD4FB /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
+		849CAFF72988B83F003BD4FB /* RankingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingViewController.xib; sourceTree = "<group>"; };
+		849CAFFA2988CFFB003BD4FB /* ConclusionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConclusionItem.swift; sourceTree = "<group>"; };
+		849CAFFC2988F07D003BD4FB /* ConclusionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConclusionView.swift; sourceTree = "<group>"; };
+		849CAFFE2988FB18003BD4FB /* ConclusionSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConclusionSpacing.swift; sourceTree = "<group>"; };
+		849CB0042989133E003BD4FB /* PersonalAccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccountTableViewCell.swift; sourceTree = "<group>"; };
+		849CB0052989133E003BD4FB /* PersonalAccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalAccountTableViewCell.xib; sourceTree = "<group>"; };
 		84A3AF99295D742D00F85434 /* Sarabun-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sarabun-SemiBold.ttf"; sourceTree = "<group>"; };
 		84A3AF9B295D94DA00F85434 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		84A3AF9C295D94DA00F85434 /* ThirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
@@ -109,25 +149,98 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		849562CF29753FBC00A4740D /* MyRecordVideoScreen */ = {
+		849562CF29753FBC00A4740D /* MyRecordVideoCell */ = {
 			isa = PBXGroup;
 			children = (
-				849562CD29753DF300A4740D /* MyRecordVideoView.swift */,
 				849562D02975403700A4740D /* MyRecordTableViewCell.swift */,
 				849562D12975403700A4740D /* MyRecordTableViewCell.xib */,
 			);
-			path = MyRecordVideoScreen;
+			path = MyRecordVideoCell;
 			sourceTree = "<group>";
 		};
-		849562D42975596100A4740D /* MyUploadVideoScreen */ = {
+		849562D42975596100A4740D /* MyUploadVideoTable */ = {
 			isa = PBXGroup;
 			children = (
 				849562D929755A0300A4740D /* MyUploadVideoView.swift */,
-				849562DB29755A3700A4740D /* MyUploadVideoView.xib */,
 				849562DD29755E4F00A4740D /* MyUploadTableViewCell.swift */,
 				849562DE29755E4F00A4740D /* MyUploadTableViewCell.xib */,
 			);
-			path = MyUploadVideoScreen;
+			path = MyUploadVideoTable;
+			sourceTree = "<group>";
+		};
+		849562E1297644BE00A4740D /* EditVideoDescriptScreen */ = {
+			isa = PBXGroup;
+			children = (
+				849562E22976458F00A4740D /* EditDescriptViewController.swift */,
+				849562E32976458F00A4740D /* EditDescriptViewController.xib */,
+				849562E629768EB900A4740D /* EditObjectCell.swift */,
+				849562E729768EB900A4740D /* EditObjectCell.xib */,
+				849562EA297694A700A4740D /* EditScreen */,
+			);
+			path = EditVideoDescriptScreen;
+			sourceTree = "<group>";
+		};
+		849562EA297694A700A4740D /* EditScreen */ = {
+			isa = PBXGroup;
+			children = (
+				849562EB297694F800A4740D /* EditObjectViewController.swift */,
+				849562EC297694F800A4740D /* EditObjectViewController.xib */,
+			);
+			path = EditScreen;
+			sourceTree = "<group>";
+		};
+		849562EF29769D0300A4740D /* PersonalScreen */ = {
+			isa = PBXGroup;
+			children = (
+				849CB000298911E7003BD4FB /* PersonalAccountView */,
+				849562F42976AB7300A4740D /* CustomConclusionView */,
+				84B8B99229701711007F3C48 /* LiveStreamCenter */,
+			);
+			path = PersonalScreen;
+			sourceTree = "<group>";
+		};
+		849562F42976AB7300A4740D /* CustomConclusionView */ = {
+			isa = PBXGroup;
+			children = (
+				849CAFFA2988CFFB003BD4FB /* ConclusionItem.swift */,
+				849CAFFC2988F07D003BD4FB /* ConclusionView.swift */,
+				849CAFFE2988FB18003BD4FB /* ConclusionSpacing.swift */,
+			);
+			path = CustomConclusionView;
+			sourceTree = "<group>";
+		};
+		849CAFDB2988B0CE003BD4FB /* OtherView */ = {
+			isa = PBXGroup;
+			children = (
+				849CAFEA2988B7FC003BD4FB /* HomeViewController.swift */,
+				849CAFEB2988B7FC003BD4FB /* HomeViewController.xib */,
+				849CAFEE2988B814003BD4FB /* FavoriteViewController.swift */,
+				849CAFEF2988B814003BD4FB /* FavoriteViewController.xib */,
+				849CAFF22988B82B003BD4FB /* LiveStreamViewController.swift */,
+				849CAFF32988B82B003BD4FB /* LiveStreamViewController.xib */,
+				849CAFF62988B83F003BD4FB /* RankingViewController.swift */,
+				849CAFF72988B83F003BD4FB /* RankingViewController.xib */,
+			);
+			path = OtherView;
+			sourceTree = "<group>";
+		};
+		849CB000298911E7003BD4FB /* PersonalAccountView */ = {
+			isa = PBXGroup;
+			children = (
+				849562F029769D5B00A4740D /* PersonalAccountViewController.swift */,
+				849562F129769D5B00A4740D /* PersonalAccountViewController.xib */,
+				849CB0012989120A003BD4FB /* PersonalAccountTable */,
+			);
+			path = PersonalAccountView;
+			sourceTree = "<group>";
+		};
+		849CB0012989120A003BD4FB /* PersonalAccountTable */ = {
+			isa = PBXGroup;
+			children = (
+				849CB0042989133E003BD4FB /* PersonalAccountTableViewCell.swift */,
+				849CB0052989133E003BD4FB /* PersonalAccountTableViewCell.xib */,
+			);
+			path = PersonalAccountTable;
 			sourceTree = "<group>";
 		};
 		84A3AFA12965545700F85434 /* SecondView */ = {
@@ -181,6 +294,7 @@
 			children = (
 				84B8B9A32974F25F007F3C48 /* LiveStreamCenterScreen */,
 				84B8B9A4297523AB007F3C48 /* VideoRecordScreen */,
+				849562E1297644BE00A4740D /* EditVideoDescriptScreen */,
 			);
 			path = LiveStreamCenter;
 			sourceTree = "<group>";
@@ -203,8 +317,8 @@
 				84B8B99C29701D8C007F3C48 /* VideoRecordViewController.xib */,
 				84B8B9A529752405007F3C48 /* RecordVideoTabbar.swift */,
 				84B8B9A7297525C2007F3C48 /* RecordVideoTabItem.swift */,
-				849562CF29753FBC00A4740D /* MyRecordVideoScreen */,
-				849562D42975596100A4740D /* MyUploadVideoScreen */,
+				849562CF29753FBC00A4740D /* MyRecordVideoCell */,
+				849562D42975596100A4740D /* MyUploadVideoTable */,
 			);
 			path = VideoRecordScreen;
 			sourceTree = "<group>";
@@ -216,9 +330,11 @@
 				84BA00142954307E00CD858F /* AuthViewController.xib */,
 				84BAFFFF29542C5200CD858F /* ViewController.swift */,
 				84BA0017295431D000CD858F /* ViewController.xib */,
+				849CAFE82988B7B5003BD4FB /* TabbarViewController.swift */,
 				84A3AFA12965545700F85434 /* SecondView */,
 				84A3AFA22965548C00F85434 /* ThirdView */,
-				84B8B99229701711007F3C48 /* LiveStreamCenter */,
+				849562EF29769D0300A4740D /* PersonalScreen */,
+				849CAFDB2988B0CE003BD4FB /* OtherView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,9 +343,9 @@
 			isa = PBXGroup;
 			children = (
 				84BA0051295BF02B00CD858F /* Sarabun-Regular.ttf */,
+				84A3AF99295D742D00F85434 /* Sarabun-SemiBold.ttf */,
 				84BA0052295BF07A00CD858F /* Sarabun-Medium.ttf */,
 				84BA0056295BFA0100CD858F /* Sarabun-Thin.ttf */,
-				84A3AF99295D742D00F85434 /* Sarabun-SemiBold.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -323,19 +439,27 @@
 			files = (
 				84A3AFA6296554F900F85434 /* DiamondCollectionViewCell.xib in Resources */,
 				84BA0018295431D000CD858F /* ViewController.xib in Resources */,
+				849CAFF12988B814003BD4FB /* FavoriteViewController.xib in Resources */,
 				84B8B99E29701D8C007F3C48 /* VideoRecordViewController.xib in Resources */,
+				849562E52976458F00A4740D /* EditDescriptViewController.xib in Resources */,
+				849562F329769D5B00A4740D /* PersonalAccountViewController.xib in Resources */,
 				84BA0048295946BB00CD858F /* BottomSheetViewController.xib in Resources */,
 				84A3AF9E295D94DA00F85434 /* ThirdViewController.xib in Resources */,
 				84BA0053295BF3BE00CD858F /* Sarabun-Regular.ttf in Resources */,
 				84B8B99629701757007F3C48 /* LivestreamCenterViewController.xib in Resources */,
+				849562E929768EB900A4740D /* EditObjectCell.xib in Resources */,
 				84B8B9A22974F24A007F3C48 /* LiveStreamCenterTableViewCell.xib in Resources */,
+				849562EE297694F800A4740D /* EditObjectViewController.xib in Resources */,
 				84BA004C2959719600CD858F /* CustomCell.xib in Resources */,
 				84BA00162954307E00CD858F /* AuthViewController.xib in Resources */,
 				84BA000829542C5300CD858F /* LaunchScreen.storyboard in Resources */,
-				849562DC29755A3700A4740D /* MyUploadVideoView.xib in Resources */,
 				84BA0057295BFA0100CD858F /* Sarabun-Thin.ttf in Resources */,
+				849CB0072989133E003BD4FB /* PersonalAccountTableViewCell.xib in Resources */,
+				849CAFF52988B82B003BD4FB /* LiveStreamViewController.xib in Resources */,
+				849CAFED2988B7FC003BD4FB /* HomeViewController.xib in Resources */,
 				84BA0054295BF3C200CD858F /* Sarabun-Medium.ttf in Resources */,
 				849562D32975403700A4740D /* MyRecordTableViewCell.xib in Resources */,
+				849CAFF92988B83F003BD4FB /* RankingViewController.xib in Resources */,
 				84A3AF9A295D742D00F85434 /* Sarabun-SemiBold.ttf in Resources */,
 				84BA000529542C5300CD858F /* Assets.xcassets in Resources */,
 				849562E029755E4F00A4740D /* MyUploadTableViewCell.xib in Resources */,
@@ -350,10 +474,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849CAFFF2988FB18003BD4FB /* ConclusionSpacing.swift in Sources */,
+				849CAFE92988B7B5003BD4FB /* TabbarViewController.swift in Sources */,
+				849562F229769D5B00A4740D /* PersonalAccountViewController.swift in Sources */,
 				84B8B989296FA78C007F3C48 /* RubyTopupView.swift in Sources */,
 				84B8B9A8297525C2007F3C48 /* RecordVideoTabItem.swift in Sources */,
+				849CB0062989133E003BD4FB /* PersonalAccountTableViewCell.swift in Sources */,
+				849CAFF02988B814003BD4FB /* FavoriteViewController.swift in Sources */,
 				84B8B987296FA777007F3C48 /* DiamondTopupView.swift in Sources */,
 				84B8B99529701757007F3C48 /* LivestreamCenterViewController.swift in Sources */,
+				849562E829768EB900A4740D /* EditObjectCell.swift in Sources */,
+				849CAFFD2988F07D003BD4FB /* ConclusionView.swift in Sources */,
 				84B8B991296FE712007F3C48 /* SpacingItem.swift in Sources */,
 				84BA003D29545DB800CD858F /* SecondViewController.swift in Sources */,
 				84BA0047295946BB00CD858F /* BottomSheetViewController.swift in Sources */,
@@ -361,18 +492,23 @@
 				84B8B99D29701D8C007F3C48 /* VideoRecordViewController.swift in Sources */,
 				84B8B984296ECCC2007F3C48 /* TabbarGradient.swift in Sources */,
 				84B8B9A629752405007F3C48 /* RecordVideoTabbar.swift in Sources */,
+				849562ED297694F800A4740D /* EditObjectViewController.swift in Sources */,
 				84BA000029542C5200CD858F /* ViewController.swift in Sources */,
 				84A3AF9D295D94DA00F85434 /* ThirdViewController.swift in Sources */,
 				84BA00152954307E00CD858F /* AuthViewController.swift in Sources */,
-				849562CE29753DF300A4740D /* MyRecordVideoView.swift in Sources */,
+				849CAFEC2988B7FC003BD4FB /* HomeViewController.swift in Sources */,
 				849562DF29755E4F00A4740D /* MyUploadTableViewCell.swift in Sources */,
 				84B8B9A12974F24A007F3C48 /* LiveStreamCenterTableViewCell.swift in Sources */,
 				84A3AFA5296554F900F85434 /* DiamondCollectionViewCell.swift in Sources */,
 				849562D22975403700A4740D /* MyRecordTableViewCell.swift in Sources */,
 				84BA004B2959719600CD858F /* CustomCell.swift in Sources */,
+				849562E42976458F00A4740D /* EditDescriptViewController.swift in Sources */,
 				84B8B98B296FA7A3007F3C48 /* RoseTopupView.swift in Sources */,
+				849CAFFB2988CFFB003BD4FB /* ConclusionItem.swift in Sources */,
+				849CAFF42988B82B003BD4FB /* LiveStreamViewController.swift in Sources */,
 				84BAFFFC29542C5200CD858F /* AppDelegate.swift in Sources */,
 				84B8B982296ECC90007F3C48 /* TabItem.swift in Sources */,
+				849CAFF82988B83F003BD4FB /* RankingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
