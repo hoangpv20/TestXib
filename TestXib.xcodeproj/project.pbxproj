@@ -34,6 +34,8 @@
 		849CAFFF2988FB18003BD4FB /* ConclusionSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CAFFE2988FB18003BD4FB /* ConclusionSpacing.swift */; };
 		849CB0062989133E003BD4FB /* PersonalAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CB0042989133E003BD4FB /* PersonalAccountTableViewCell.swift */; };
 		849CB0072989133E003BD4FB /* PersonalAccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849CB0052989133E003BD4FB /* PersonalAccountTableViewCell.xib */; };
+		849CB00A298A0C99003BD4FB /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CB008298A0C99003BD4FB /* SettingViewController.swift */; };
+		849CB00B298A0C99003BD4FB /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849CB009298A0C99003BD4FB /* SettingViewController.xib */; };
 		84A3AF9A295D742D00F85434 /* Sarabun-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3AF99295D742D00F85434 /* Sarabun-SemiBold.ttf */; };
 		84A3AF9D295D94DA00F85434 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AF9B295D94DA00F85434 /* ThirdViewController.swift */; };
 		84A3AF9E295D94DA00F85434 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A3AF9C295D94DA00F85434 /* ThirdViewController.xib */; };
@@ -99,6 +101,8 @@
 		849CAFFE2988FB18003BD4FB /* ConclusionSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConclusionSpacing.swift; sourceTree = "<group>"; };
 		849CB0042989133E003BD4FB /* PersonalAccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccountTableViewCell.swift; sourceTree = "<group>"; };
 		849CB0052989133E003BD4FB /* PersonalAccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalAccountTableViewCell.xib; sourceTree = "<group>"; };
+		849CB008298A0C99003BD4FB /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		849CB009298A0C99003BD4FB /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		84A3AF99295D742D00F85434 /* Sarabun-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sarabun-SemiBold.ttf"; sourceTree = "<group>"; };
 		84A3AF9B295D94DA00F85434 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		84A3AF9C295D94DA00F85434 /* ThirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 				849CAFF32988B82B003BD4FB /* LiveStreamViewController.xib */,
 				849CAFF62988B83F003BD4FB /* RankingViewController.swift */,
 				849CAFF72988B83F003BD4FB /* RankingViewController.xib */,
+				849CB008298A0C99003BD4FB /* SettingViewController.swift */,
+				849CB009298A0C99003BD4FB /* SettingViewController.xib */,
 			);
 			path = OtherView;
 			sourceTree = "<group>";
@@ -444,6 +450,7 @@
 				849562E52976458F00A4740D /* EditDescriptViewController.xib in Resources */,
 				849562F329769D5B00A4740D /* PersonalAccountViewController.xib in Resources */,
 				84BA0048295946BB00CD858F /* BottomSheetViewController.xib in Resources */,
+				849CB00B298A0C99003BD4FB /* SettingViewController.xib in Resources */,
 				84A3AF9E295D94DA00F85434 /* ThirdViewController.xib in Resources */,
 				84BA0053295BF3BE00CD858F /* Sarabun-Regular.ttf in Resources */,
 				84B8B99629701757007F3C48 /* LivestreamCenterViewController.xib in Resources */,
@@ -497,6 +504,7 @@
 				84A3AF9D295D94DA00F85434 /* ThirdViewController.swift in Sources */,
 				84BA00152954307E00CD858F /* AuthViewController.swift in Sources */,
 				849CAFEC2988B7FC003BD4FB /* HomeViewController.swift in Sources */,
+				849CB00A298A0C99003BD4FB /* SettingViewController.swift in Sources */,
 				849562DF29755E4F00A4740D /* MyUploadTableViewCell.swift in Sources */,
 				84B8B9A12974F24A007F3C48 /* LiveStreamCenterTableViewCell.swift in Sources */,
 				84A3AFA5296554F900F85434 /* DiamondCollectionViewCell.swift in Sources */,

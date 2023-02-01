@@ -36,6 +36,7 @@ class LivestreamCenterViewController: UIViewController, UITableViewDelegate, UIT
         livestreamCenterActivity.dataSource = self
         livestreamCenterActivity.delegate = self
         livestreamCenterActivity.register(UINib(nibName: "LiveStreamCenterTableViewCell", bundle: nil), forCellReuseIdentifier: "LiveStreamCenterTableViewCell")
+        livestreamCenterActivity.layer.cornerRadius = 7.0
         
         view.addSubview(avtImage)
         avtImage.image = UIImage(named: "AvtCircle")

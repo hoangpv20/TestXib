@@ -18,17 +18,17 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GradientScreen" translatesAutoresizingMaskIntoConstraints="NO" id="Z3E-dQ-aE2">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GradientScreen" translatesAutoresizingMaskIntoConstraints="NO" id="HID-tK-4oL">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Z3E-dQ-aE2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Fyk-Ga-c9V"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Z3E-dQ-aE2" secondAttribute="trailing" id="bBp-8q-7WA"/>
-                <constraint firstAttribute="bottom" secondItem="Z3E-dQ-aE2" secondAttribute="bottom" id="jEY-X9-afy"/>
-                <constraint firstItem="Z3E-dQ-aE2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lIo-hG-Es0"/>
+                <constraint firstItem="HID-tK-4oL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FtY-X6-aAD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HID-tK-4oL" secondAttribute="trailing" id="Suc-Mr-xFO"/>
+                <constraint firstItem="HID-tK-4oL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="plx-hT-Bvh"/>
+                <constraint firstAttribute="bottom" secondItem="HID-tK-4oL" secondAttribute="bottom" id="wTb-tv-9TK"/>
             </constraints>
             <point key="canvasLocation" x="132" y="78"/>
         </view>

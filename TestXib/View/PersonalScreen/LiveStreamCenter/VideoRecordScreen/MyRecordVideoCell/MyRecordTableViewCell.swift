@@ -36,6 +36,11 @@ class MyRecordTableViewCell: UITableViewCell {
         uploadButton.titleLabel?.font = UIFont(name: "Sarabun-Regular", size: 14)
         uploadButton.layer.cornerRadius = 5.0
         
+        deleteButton.addTarget(self, action: #selector(didTapDelete), for: .touchUpInside)
+        
+    }
+    @objc func didTapDelete() {
+        
     }
     func loadData(item: Record) {
         recordSubcript.text = item.subcript

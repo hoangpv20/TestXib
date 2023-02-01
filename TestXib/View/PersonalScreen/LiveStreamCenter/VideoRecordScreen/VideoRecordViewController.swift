@@ -92,6 +92,10 @@ class VideoRecordViewController: UIViewController, UITableViewDelegate, UITableV
         myRecordTableView.deselectRow(at: indexPath, animated: true)
         self.navigationController?.pushViewController(editDescVC, animated: true)
     }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
     
     @objc func myRecordVideo() {
         recordVideoTabbar.myTabItem[0].selectedItem()

@@ -48,7 +48,7 @@ class EditDescriptViewController: UIViewController, UITableViewDataSource, UITab
         titleName.translatesAutoresizingMaskIntoConstraints = false
         titleName.backgroundColor = .white
         titleName.font = UIFont(name: "sarabun-Regular", size: 14)
-        titleName.layer.cornerRadius = 5.0
+        titleName.layer.cornerRadius = 8.0
         titleName.numberOfLines = 4
         titleName.textAlignment = .left
         titleName.text = "Toi la Tu la mot nguoi dep trai !!!!"
@@ -65,6 +65,7 @@ class EditDescriptViewController: UIViewController, UITableViewDataSource, UITab
         editObject.delegate = self
         editObject.dataSource = self
         editObject.register(UINib(nibName: "EditObjectCell", bundle: nil), forCellReuseIdentifier: "EditObjectCell")
+        editObject.layer.cornerRadius = 8.0
         
         let constraint = [
             videoAvt.centerXAnchor.constraint(equalTo: view.centerXAnchor),
