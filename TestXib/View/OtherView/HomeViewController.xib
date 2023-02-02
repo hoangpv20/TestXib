@@ -17,24 +17,12 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GradientScreen" translatesAutoresizingMaskIntoConstraints="NO" id="KBd-HX-jha">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                </imageView>
-            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="KBd-HX-jha" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9Fg-GY-ytc"/>
-                <constraint firstAttribute="bottom" secondItem="KBd-HX-jha" secondAttribute="bottom" id="EYx-uC-GtS"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KBd-HX-jha" secondAttribute="trailing" id="jLZ-kv-HGc"/>
-                <constraint firstItem="KBd-HX-jha" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vVJ-as-Ntp"/>
-            </constraints>
             <point key="canvasLocation" x="132" y="78"/>
         </view>
     </objects>
     <resources>
-        <image name="GradientScreen" width="375" height="811"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

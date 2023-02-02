@@ -124,11 +124,6 @@ class EditDescriptViewController: UIViewController, UITableViewDataSource, UITab
         editObject.deselectRow(at: indexPath, animated: true)
         self.navigationController?.pushViewController(editObjcVC, animated: true)
     }
-    private func textLimit(existingText: String?, newText: String, limit: Int) -> Bool {
-        let text = existingText ?? ""
-        let isAtLimit = text.count + newText.count <= limit
-        return isAtLimit
-    }
     let textFieldLimit = 5
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (textView == titleName) {
@@ -136,6 +131,7 @@ class EditDescriptViewController: UIViewController, UITableViewDataSource, UITab
             let lngthToAdd = text.count
             let lengthCount = strLength + lngthToAdd
             self.wordNumber.text = "\(lengthCount)/200"
+            return lengthCount < 200
         }
         return true
     }

@@ -42,14 +42,13 @@ class MyRecordTableViewCell: UITableViewCell {
     @objc func didTapDelete() {
         
     }
-    func loadData(item: Record) {
+    func loadData1(item: Record) {
         recordSubcript.text = item.subcript
         recordTime.text = item.time
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
     
 }

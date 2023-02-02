@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		849562D22975403700A4740D /* MyRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849562D02975403700A4740D /* MyRecordTableViewCell.swift */; };
 		849562D32975403700A4740D /* MyRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849562D12975403700A4740D /* MyRecordTableViewCell.xib */; };
-		849562DA29755A0300A4740D /* MyUploadVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849562D929755A0300A4740D /* MyUploadVideoView.swift */; };
 		849562DF29755E4F00A4740D /* MyUploadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849562DD29755E4F00A4740D /* MyUploadTableViewCell.swift */; };
 		849562E029755E4F00A4740D /* MyUploadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849562DE29755E4F00A4740D /* MyUploadTableViewCell.xib */; };
 		849562E42976458F00A4740D /* EditDescriptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849562E22976458F00A4740D /* EditDescriptViewController.swift */; };
@@ -78,7 +77,6 @@
 /* Begin PBXFileReference section */
 		849562D02975403700A4740D /* MyRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordTableViewCell.swift; sourceTree = "<group>"; };
 		849562D12975403700A4740D /* MyRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyRecordTableViewCell.xib; sourceTree = "<group>"; };
-		849562D929755A0300A4740D /* MyUploadVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUploadVideoView.swift; sourceTree = "<group>"; };
 		849562DD29755E4F00A4740D /* MyUploadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUploadTableViewCell.swift; sourceTree = "<group>"; };
 		849562DE29755E4F00A4740D /* MyUploadTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyUploadTableViewCell.xib; sourceTree = "<group>"; };
 		849562E22976458F00A4740D /* EditDescriptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDescriptViewController.swift; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 		849562D42975596100A4740D /* MyUploadVideoTable */ = {
 			isa = PBXGroup;
 			children = (
-				849562D929755A0300A4740D /* MyUploadVideoView.swift */,
 				849562DD29755E4F00A4740D /* MyUploadTableViewCell.swift */,
 				849562DE29755E4F00A4740D /* MyUploadTableViewCell.xib */,
 			);
@@ -502,7 +499,6 @@
 				84B8B991296FE712007F3C48 /* SpacingItem.swift in Sources */,
 				84BA003D29545DB800CD858F /* SecondViewController.swift in Sources */,
 				84BA0047295946BB00CD858F /* BottomSheetViewController.swift in Sources */,
-				849562DA29755A0300A4740D /* MyUploadVideoView.swift in Sources */,
 				84B8B99D29701D8C007F3C48 /* VideoRecordViewController.swift in Sources */,
 				84B8B984296ECCC2007F3C48 /* TabbarGradient.swift in Sources */,
 				84B8B9A629752405007F3C48 /* RecordVideoTabbar.swift in Sources */,

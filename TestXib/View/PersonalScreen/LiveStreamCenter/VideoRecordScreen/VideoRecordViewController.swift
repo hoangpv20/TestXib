@@ -16,11 +16,19 @@ class VideoRecordViewController: UIViewController, UITableViewDelegate, UITableV
         Record(subcript: "Upload up to eight 7-inch tablet screenshots. Screen shots must be", time: "15:30  08/03/2022"),
         Record(subcript: "Upload up to eight 7-inch tablet screenshots. Screen shots must be", time: "15:30  08/03/2022"),
     ]
+    let data1: [Upload] = [
+        Upload(subcript: "Upload up to eight 7-inch tablet screenshots. Screen shots must be", time: "15:30  08/03/2022"),
+        Upload(subcript: "Upload up to eight 7-inch tablet screenshots. Screen shots must be", time: "15:30  08/03/2022"),
+        Upload(subcript: "Upload up to eight 7-inch tablet screenshots. Screen shots must be", time: "15:30  08/03/2022"),
+        Upload(subcript: "Upload up to eight 7-inch tablet screenshots. Screen shots must be", time: "15:30  08/03/2022"),
+        Upload(subcript: "Upload up to eight 7-inch tablet screenshots. Screen shots must be", time: "15:30  08/03/2022"),
+    ]
         
     let recordVideoTabbar = RecordVideoTabbar()
     let recordView = UIView()
-    let uploadView = MyUploadVideoView()
+    let uploadView = UIView()
     let myRecordTableView = UITableView()
+    let myUploadTableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +60,13 @@ class VideoRecordViewController: UIViewController, UITableViewDelegate, UITableV
         myRecordTableView.delegate = self
         myRecordTableView.register(UINib(nibName: "MyRecordTableViewCell", bundle: nil), forCellReuseIdentifier: "MyRecordTableViewCell")
         
+        myUploadTableView.backgroundColor = .clear
+        uploadView.addSubview(myUploadTableView)
+        myUploadTableView.translatesAutoresizingMaskIntoConstraints = false
+        myUploadTableView.delegate = self
+        myUploadTableView.dataSource = self
+        myUploadTableView.register(UINib(nibName: "MyUploadTableViewCell", bundle: nil), forCellReuseIdentifier: "MyUploadTableViewCell")
+        
         let constraint = [
             recordVideoTabbar.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
             recordVideoTabbar.topAnchor.constraint(equalTo: view.topAnchor, constant: 104),
@@ -71,27 +86,50 @@ class VideoRecordViewController: UIViewController, UITableViewDelegate, UITableV
             myRecordTableView.topAnchor.constraint(equalTo: recordView.topAnchor),
             myRecordTableView.leadingAnchor.constraint(equalTo: recordView.leadingAnchor),
             myRecordTableView.trailingAnchor.constraint(equalTo: recordView.trailingAnchor),
-            myRecordTableView.bottomAnchor.constraint(equalTo: recordView.bottomAnchor)
+            myRecordTableView.bottomAnchor.constraint(equalTo: recordView.bottomAnchor),
+            
+            myUploadTableView.topAnchor.constraint(equalTo: uploadView.topAnchor),
+            myUploadTableView.leadingAnchor.constraint(equalTo: uploadView.leadingAnchor),
+            myUploadTableView.trailingAnchor.constraint(equalTo: uploadView.trailingAnchor),
+            myUploadTableView.bottomAnchor.constraint(equalTo: uploadView.bottomAnchor)
         ]
         NSLayoutConstraint.activate(constraint)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        var count: Int?
+        
+        if tableView == self.myRecordTableView {
+            count = data.count
+        }
+        if tableView == self.myUploadTableView {
+            count = data1.count
+        }
+        return count!
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let record = data[indexPath.row]
-        let cell = myRecordTableView.dequeueReusableCell(withIdentifier: "MyRecordTableViewCell") as! MyRecordTableViewCell
-        cell.loadData(item: record)
-        return  cell
+        let upload = data1[indexPath.row]
+        if tableView == self.myUploadTableView {
+            let cell = myUploadTableView.dequeueReusableCell(withIdentifier: "MyUploadTableViewCell") as! MyUploadTableViewCell
+            cell.loadData(item: upload)
+            return cell
+        } else {
+            let cell = myRecordTableView.dequeueReusableCell(withIdentifier: "MyRecordTableViewCell") as! MyRecordTableViewCell
+            cell.loadData1(item: record)
+            return cell
+        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let editDescVC = EditDescriptViewController()
-        if recordView.isHidden == false {
+        if tableView == self.myRecordTableView {
         myRecordTableView.deselectRow(at: indexPath, animated: true)
         self.navigationController?.pushViewController(editDescVC, animated: true)
+        } else {
+            myUploadTableView.deselectRow(at: indexPath, animated: true)
+            self.navigationController?.pushViewController(editDescVC, animated: true)
         }
     }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -119,4 +157,7 @@ struct Record {
     var subcript: String
     var time: String
 }
-
+struct Upload {
+    var subcript: String
+    var time: String
+}
