@@ -7,14 +7,15 @@
 
 import UIKit
 
-class EditDescriptViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class EditDescriptViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
     let videoAvt = UIImageView()
     let videoTitle = UILabel()
-    let titleName = UILabel()
+    let titleName = UITextView()
     let wordNumber = UILabel()
     let editObject = UITableView()
     let editPicture = UIButton()
+    var placeHolderlabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,18 +48,28 @@ class EditDescriptViewController: UIViewController, UITableViewDataSource, UITab
         view.addSubview(titleName)
         titleName.translatesAutoresizingMaskIntoConstraints = false
         titleName.backgroundColor = .white
-        titleName.font = UIFont(name: "sarabun-Regular", size: 14)
+        titleName.delegate = self
+        titleName.font = UIFont(name: "Sarabun-Regular", size: 14)
+        titleName.textColor = UIColor(named: "ActitvityNameColor")
         titleName.layer.cornerRadius = 8.0
-        titleName.numberOfLines = 4
-        titleName.textAlignment = .left
-        titleName.text = "Toi la Tu la mot nguoi dep trai !!!!"
-        titleName.textColor = UIColor(named: "ActivityNameColor")
+        titleName.autocapitalizationType = .words
+        titleName.keyboardType = UIKeyboardType.default
+        titleName.returnKeyType = UIReturnKeyType.done
+        titleName.autocorrectionType = UITextAutocorrectionType.no
+        
+        placeHolderlabel.text = "Enter some text here..."
+        placeHolderlabel.font = UIFont(name: "Sarabun-Regular", size: 14)
+        placeHolderlabel.sizeToFit()
+        titleName.addSubview(placeHolderlabel)
+        placeHolderlabel.frame.origin = CGPoint(x: 5, y: 5)
+        placeHolderlabel.textColor = .tertiaryLabel
+        placeHolderlabel.isHidden = !titleName.text.isEmpty
         
         view.addSubview(wordNumber)
         wordNumber.translatesAutoresizingMaskIntoConstraints = false
         wordNumber.font = UIFont(name: "Sarabun-Regular", size: 14)
         wordNumber.textColor = UIColor(named: "UnselectedTextColor")
-        wordNumber.text = "\(titleName.text?.count ?? 0)/200"
+        wordNumber.text = "0/200"
         
         view.addSubview(editObject)
         editObject.translatesAutoresizingMaskIntoConstraints = false
@@ -112,5 +123,25 @@ class EditDescriptViewController: UIViewController, UITableViewDataSource, UITab
         let editObjcVC = EditObjectViewController()
         editObject.deselectRow(at: indexPath, animated: true)
         self.navigationController?.pushViewController(editObjcVC, animated: true)
+    }
+    private func textLimit(existingText: String?, newText: String, limit: Int) -> Bool {
+        let text = existingText ?? ""
+        let isAtLimit = text.count + newText.count <= limit
+        return isAtLimit
+    }
+    let textFieldLimit = 5
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (textView == titleName) {
+            let strLength = textView.text?.count ?? 0
+            let lngthToAdd = text.count
+            let lengthCount = strLength + lngthToAdd
+            self.wordNumber.text = "\(lengthCount)/200"
+        }
+        return true
+    }
+}
+extension EditDescriptViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        placeHolderlabel.isHidden = !titleName.text.isEmpty
     }
 }
